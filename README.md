@@ -12,3 +12,6 @@ $ cd ellen                          # Changes to ./ellen/
 $ vi Gemfile                        # Adds your favorite plugin gems
 $ bundle exec ellen --adapter=shell # Run your chatterbot with specified adapter
 ```
+
+## Adapters
+* [ellen-hipchat](https://github.com/r7kamura/ellen-hipchat)
