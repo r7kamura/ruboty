@@ -1,14 +1,6 @@
 require "mem"
 require "slop"
 
-# Creates an Ellen::Command object from given arguments.
-#
-# Example:
-#
-#   builder = Ellen::CommandBuilder.new(ARGV)
-#   command = builder.build
-#   command.call
-#
 module Ellen
   class CommandBuilder
     include Mem
