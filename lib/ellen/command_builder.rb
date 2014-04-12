@@ -22,6 +22,7 @@ module Ellen
       Slop.parse!(arguments, help: true) do
         on("a", "adapter=", "Take adapter name.")
         on("g", "generate", "Generate a new chatterbot with ./ellen/ directory if specified.")
+        on("l", "load=", "Load a ruby file before running.")
       end.to_hash
     end
     memoize :options

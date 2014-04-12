@@ -10,6 +10,7 @@ module Ellen
 
     def run
       bundle
+      setup
       adapt
     end
 
@@ -30,6 +31,10 @@ module Ellen
 
     def bundle
       Bundler.require
+    end
+
+    def setup
+      load(options[:load]) if options[:load]
     end
 
     def handlers
