@@ -26,7 +26,7 @@ module Ellen
     private
 
     def command_class
-      if options.generate?
+      if options[:generate]
         Commands::Generate
       else
         Commands::Run
@@ -36,7 +36,7 @@ module Ellen
     def options
       Slop.parse(arguments, help: true) do
         on("g", "generate", "Generate a new chatterbot with ./ellen/ directory.")
-      end
+      end.to_hash
     end
     memoize :options
   end
