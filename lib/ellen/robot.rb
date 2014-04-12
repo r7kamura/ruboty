@@ -1,7 +1,10 @@
 require "bundler"
+require "mem"
 
 module Ellen
   class Robot
+    include Mem
+
     attr_reader :options
 
     def initialize(options)
@@ -20,8 +23,9 @@ module Ellen
     end
 
     def adapter
-      AdapterBuilder.new(options).build
+      AdapterBuilder.new(self, options).build
     end
+    memoize :adapter
 
     def bundle
       Bundler.require
