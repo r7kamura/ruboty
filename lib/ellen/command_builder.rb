@@ -22,7 +22,7 @@ module Ellen
     end
 
     def options
-      Slop.parse(arguments, help: true) do
+      Slop.parse!(arguments, help: true) do
         on("g", "generate", "Generate a new chatterbot with ./ellen/ directory if specified.")
         on("a", "adapter=", "Take adapter name.")
       end.to_hash
