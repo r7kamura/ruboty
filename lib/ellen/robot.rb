@@ -1,6 +1,3 @@
-require "bundler"
-require "mem"
-
 module Ellen
   class Robot
     include Mem

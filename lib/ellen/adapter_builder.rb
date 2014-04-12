@@ -1,16 +1,5 @@
-require "mem"
-
 module Ellen
   class AdapterBuilder
-    class << self
-      include Mem
-
-      def adapters
-        {}
-      end
-      memoize :adapters
-    end
-
     attr_reader :robot, :options
 
     def initialize(robot, options)
@@ -25,7 +14,7 @@ module Ellen
     private
 
     def adapter_class
-      self.class.adapters[name] or die
+      Ellen.adapters[name] or die
     end
 
     def name

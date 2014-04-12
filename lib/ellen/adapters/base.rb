@@ -14,7 +14,7 @@ module Ellen
   module Adapters
     class Base
       def self.register(name)
-        Ellen::AdapterBuilder.adapters[name.to_s] = self
+        Ellen.adapters[name.to_s] = self
       end
 
       attr_reader :robot, :options

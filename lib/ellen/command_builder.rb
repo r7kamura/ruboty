@@ -1,6 +1,3 @@
-require "mem"
-require "slop"
-
 module Ellen
   class CommandBuilder
     include Mem
