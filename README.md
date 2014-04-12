@@ -6,8 +6,8 @@ A chatterbot framework, inspired by Hubot.
 * Redis
 
 ## Installation
-```
-gem install ellen
+```sh
+$ gem install ellen # Install `ellen` gem to your local machine
 ```
 
 ## Usage
