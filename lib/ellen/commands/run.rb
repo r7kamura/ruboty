@@ -2,7 +2,7 @@ module Ellen
   module Commands
     class Run < Base
       def call
-        Engine.new(options).run
+        Robot.new(options).run
       end
     end
   end

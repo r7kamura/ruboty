@@ -1,12 +1,12 @@
 require "ellen/adapter_builder"
+require "ellen/adapters/base"
+require "ellen/adapters/shell"
 require "ellen/command_builder"
 require "ellen/commands/base"
 require "ellen/commands/generate"
 require "ellen/commands/run"
-require "ellen/adapters/base"
-require "ellen/adapters/shell"
-require "ellen/engine"
 require "ellen/logger"
+require "ellen/robot"
 require "ellen/version"
 
 module Ellen

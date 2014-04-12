@@ -1,7 +1,7 @@
 require "bundler"
 
 module Ellen
-  class Engine
+  class Robot
     attr_reader :options
 
     def initialize(options)
