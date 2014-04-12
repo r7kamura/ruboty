@@ -28,6 +28,8 @@ module Ellen
 
       def listen
         loop { step }
+      rescue Interrupt
+        exit
       end
 
       def step
