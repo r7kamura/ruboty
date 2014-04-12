@@ -28,20 +28,11 @@ describe Ellen::Commands::Generate do
     context "when ./ellen/ directory already exists" do
       before do
         FileUtils.mkdir("./ellen/")
-        $stdout = io
       end
 
-      after do
-        $stdout = STDOUT
-      end
-
-      let(:io) do
-        StringIO.new
-      end
-
-      it "outputs warning message" do
-        call
-        io.string.should == "./ellen/ already exists.\n"
+      it "exits process with dying message" do
+        Ellen.logger.should_receive(:error).with("./ellen/ already exists.")
+        expect { call }.to raise_error(SystemExit)
       end
     end
   end

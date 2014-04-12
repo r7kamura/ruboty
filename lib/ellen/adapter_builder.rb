@@ -1,23 +1,42 @@
+require "mem"
+
 module Ellen
   class AdapterBuilder
-    attr_reader :name
+    class << self
+      include Mem
 
-    def initialize(name)
-      @name = name
+      def adapters
+        {}
+      end
+      memoize :adapters
+    end
+
+    attr_reader :options
+
+    def initialize(options)
+      @options = options
     end
 
     def build
-      adapter_class.new
+      adapter_class.new(options)
     end
 
     private
 
-    # TODO
     def adapter_class
-      Class.new do
-        def run
-        end
-      end
+      self.class.adapters[name] or die
+    end
+
+    def name
+      options[:adapter] || default_name
+    end
+
+    def default_name
+      "shell"
+    end
+
+    def die
+      Ellen.die("Undefined adapter for `#{name}`")
     end
   end
 end

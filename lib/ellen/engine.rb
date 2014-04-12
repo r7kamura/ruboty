@@ -18,7 +18,7 @@ module Ellen
     end
 
     def adapter
-      AdapterBuilder.new(options[:adapter]).build
+      AdapterBuilder.new(options).build
     end
 
     def bundle

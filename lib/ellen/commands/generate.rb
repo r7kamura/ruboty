@@ -4,7 +4,7 @@ module Ellen
   module Commands
     class Generate < Base
       def call
-        valid? ? copy : warn
+        valid? ? copy : die
       end
 
       private
@@ -13,8 +13,8 @@ module Ellen
         FileUtils.cp_r(templates_directory_path, destination_path)
       end
 
-      def warn
-        Ellen.logger.warn("#{destination_path} already exists.")
+      def die
+        Ellen.die("#{destination_path} already exists.")
       end
 
       def templates_directory_path
