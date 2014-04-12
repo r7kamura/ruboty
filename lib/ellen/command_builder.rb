@@ -1,3 +1,6 @@
+require "mem"
+require "slop"
+
 # Creates a Ellen::Command object from given arguments.
 #
 # Example:
@@ -8,6 +11,8 @@
 #
 module Ellen
   class CommandBuilder
+    include Mem
+
     attr_reader :arguments
 
     def initialize(arguments = ARGV)
@@ -21,21 +26,18 @@ module Ellen
     private
 
     def command_class
-      case command_name
-      when "generate"
+      if options.generate?
         Commands::Generate
-      when "run"
-        Commands::Run
       else
-        raise UndefinedCommandNameError, "No command is defined for: #{command_name}"
+        Commands::Run
       end
     end
 
-    def command_name
-      ARGV[0]
+    def options
+      Slop.parse(arguments, help: true) do
+        on("g", "generate", "Generate a new chatterbot with ./ellen/ directory.")
+      end
     end
-
-    class UndefinedCommandNameError < StandardError
-    end
+    memoize :options
   end
 end
