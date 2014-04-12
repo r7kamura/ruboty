@@ -8,7 +8,9 @@ require "ellen/logger"
 require "ellen/version"
 
 module Ellen
-  def self.logger
-    @logger ||= Ellen::Logger.new($stdout)
+  class << self
+    def logger
+      @logger ||= Ellen::Logger.new($stdout)
+    end
   end
 end
