@@ -8,7 +8,7 @@ module Ellen
         if valid?
           FileUtils.cp_r(templates_directory_path, destination_path)
         else
-          puts "./ellen/ already exists."
+          Ellen.logger.warn("./ellen/ already exists.")
         end
       end
 
