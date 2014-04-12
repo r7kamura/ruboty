@@ -1,3 +1,5 @@
+require "bundler"
+
 module Ellen
   class Engine
     attr_reader :options
