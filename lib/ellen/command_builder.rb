@@ -26,11 +26,7 @@ module Ellen
     private
 
     def command_class
-      if options[:generate]
-        Commands::Generate
-      else
-        Commands::Run
-      end
+      options[:generate] ? Commands::Generate : Commands::Run
     end
 
     def options
