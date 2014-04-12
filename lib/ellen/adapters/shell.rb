@@ -28,9 +28,11 @@ module Ellen
 
       def step
         prompt
-        case read
+        case message = read
         when "exit", "quit"
           exit
+        else
+          robot.receive(message)
         end
       end
     end

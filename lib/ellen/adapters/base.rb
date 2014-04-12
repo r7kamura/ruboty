@@ -17,9 +17,10 @@ module Ellen
         Ellen::AdapterBuilder.adapters[name.to_s] = self
       end
 
-      attr_reader :options
+      attr_reader :robot, :options
 
-      def initialize(options)
+      def initialize(robot, options)
+        @robot = robot
         @options = options
       end
     end

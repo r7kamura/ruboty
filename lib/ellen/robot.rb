@@ -16,6 +16,10 @@ module Ellen
       adapt
     end
 
+    # TODO
+    def receive(message)
+    end
+
     private
 
     def adapt
