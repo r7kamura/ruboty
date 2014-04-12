@@ -1,3 +1,5 @@
+require "readline"
+
 module Ellen
   module Adapters
     class Shell < Base
@@ -13,11 +15,15 @@ module Ellen
       end
 
       def prompt
-        print "> "
+        @prompt ||= "> "
+      end
+
+      def prompt=(str)
+        @prompt = str
       end
 
       def read
-        gets.chomp
+        Readline.readline(prompt, true)
       end
 
       def listen
