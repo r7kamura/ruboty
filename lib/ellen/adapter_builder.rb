@@ -36,7 +36,7 @@ module Ellen
     end
 
     def die
-      Ellen.die("Undefined adapter for `#{name}`")
+      Ellen.die("No adapter is defined for `#{name}`")
     end
   end
 end

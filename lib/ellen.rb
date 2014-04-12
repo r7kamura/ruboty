@@ -16,7 +16,7 @@ module Ellen
     end
 
     def die(message)
-      logger.error(message)
+      logger.error("Error: #{message}")
       exit(1)
     end
   end

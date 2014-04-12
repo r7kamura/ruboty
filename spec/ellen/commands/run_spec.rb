@@ -42,7 +42,7 @@ describe Ellen::Commands::Run do
       end
 
       it "exits with dying message" do
-        Ellen.logger.should_receive(:error).with("Undefined adapter for `unregistered`")
+        Ellen.logger.should_receive(:error).with("Error: No adapter is defined for `unregistered`")
         expect { call }.to raise_error(SystemExit)
       end
     end

@@ -31,7 +31,7 @@ describe Ellen::Commands::Generate do
       end
 
       it "exits process with dying message" do
-        Ellen.logger.should_receive(:error).with("./ellen/ already exists.")
+        Ellen.logger.should_receive(:error).with("Error: ./ellen/ already exists.")
         expect { call }.to raise_error(SystemExit)
       end
     end
