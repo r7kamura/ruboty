@@ -8,6 +8,10 @@ module Ellen
         listen
       end
 
+      def say(body, options = {})
+        puts body
+      end
+
       private
 
       def explain
@@ -34,12 +38,16 @@ module Ellen
 
       def step
         prompt
-        case message = read
+        case body = read
         when "exit", "quit"
           exit
         else
-          robot.receive(message)
+          robot.receive(body: body, source: source, command: true)
         end
+      end
+
+      def source
+        "shell user"
       end
     end
   end

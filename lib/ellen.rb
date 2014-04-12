@@ -1,3 +1,4 @@
+require "active_support/core_ext/module/delegation"
 require "active_support/core_ext/string/inflections"
 require "bundler"
 require "mem"
@@ -28,6 +29,7 @@ module Ellen
   end
 end
 
+require "ellen/action"
 require "ellen/adapter_builder"
 require "ellen/adapters/base"
 require "ellen/adapters/shell"
@@ -38,5 +40,6 @@ require "ellen/commands/run"
 require "ellen/handlers/base"
 require "ellen/handlers/help"
 require "ellen/logger"
+require "ellen/message"
 require "ellen/robot"
 require "ellen/version"

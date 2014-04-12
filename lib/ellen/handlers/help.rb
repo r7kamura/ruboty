@@ -1,16 +1,8 @@
 module Ellen
   module Handlers
     class Help < Base
-      def call(message)
-        case message
-        when /help\z/
-          help
-        end
-      end
-
-      # TODO
-      def help
-        puts "Not yet implemented"
+      on /help\z/, command: true do |message|
+        say "You'll be okay", destination: message.source
       end
     end
   end

@@ -2,6 +2,8 @@ module Ellen
   class Robot
     include Mem
 
+    delegate :say, to: :adapter
+
     attr_reader :options
 
     def initialize(options)
@@ -14,8 +16,11 @@ module Ellen
       adapt
     end
 
-    def receive(message)
-      handlers.each {|handler| handler.call(message) }
+    def receive(attributes)
+      message = Message.new(attributes)
+      handlers.each do |handler|
+        handler.call(message)
+      end
     end
 
     private
