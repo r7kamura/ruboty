@@ -2,9 +2,8 @@
 #
 # Example:
 #
+#   # Used as `ellen --adapter=my_adapter`
 #   class MyAdapter < Ellen::Adapters::Base
-#     register :my_adapter # For `ellen --adapter=my_adapter`
-#
 #     def run
 #       ... do your work ...
 #     end
@@ -13,8 +12,11 @@
 module Ellen
   module Adapters
     class Base
-      def self.register(name)
-        Ellen.adapters[name.to_s] = self
+      class << self
+        def inherited(child)
+          super
+          Ellen.adapters[child.name.split("::").last.underscore] = child
+        end
       end
 
       attr_reader :robot, :options

@@ -1,3 +1,4 @@
+require "active_support/core_ext/string/inflections"
 require "bundler"
 require "mem"
 require "slop"

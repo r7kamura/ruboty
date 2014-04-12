@@ -1,8 +1,6 @@
 module Ellen
   module Adapters
     class Shell < Base
-      register :shell
-
       def run
         explain
         listen
