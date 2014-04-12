@@ -13,7 +13,6 @@ module Ellen
     class Base
       class << self
         def inherited(child)
-          super
           Ellen.handlers << child
         end
       end

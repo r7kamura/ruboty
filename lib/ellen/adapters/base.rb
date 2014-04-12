@@ -14,7 +14,6 @@ module Ellen
     class Base
       class << self
         def inherited(child)
-          super
           Ellen.adapters[child.name.split("::").last.underscore] = child
         end
       end
