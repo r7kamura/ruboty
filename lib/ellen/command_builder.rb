@@ -1,7 +1,7 @@
 require "mem"
 require "slop"
 
-# Creates a Ellen::Command object from given arguments.
+# Creates an Ellen::Command object from given arguments.
 #
 # Example:
 #
