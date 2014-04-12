@@ -19,6 +19,11 @@ module Ellen
       {}
     end
     memoize :adapters
+
+    def handlers
+      []
+    end
+    memoize :handlers
   end
 end
 
@@ -29,6 +34,8 @@ require "ellen/command_builder"
 require "ellen/commands/base"
 require "ellen/commands/generate"
 require "ellen/commands/run"
+require "ellen/handlers/base"
+require "ellen/handlers/help"
 require "ellen/logger"
 require "ellen/robot"
 require "ellen/version"

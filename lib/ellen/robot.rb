@@ -13,8 +13,8 @@ module Ellen
       adapt
     end
 
-    # TODO
     def receive(message)
+      handlers.each {|handler| handler.call(message) }
     end
 
     private
@@ -31,5 +31,10 @@ module Ellen
     def bundle
       Bundler.require
     end
+
+    def handlers
+      Ellen.handlers.map {|handler_class| handler_class.new(self) }
+    end
+    memoize :handlers
   end
 end
