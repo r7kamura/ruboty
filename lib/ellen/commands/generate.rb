@@ -2,7 +2,7 @@ require "fileutils"
 
 module Ellen
   module Commands
-    class Generate
+    class Generate < Base
       def call
         valid? ? copy : warn
       end

@@ -20,7 +20,7 @@ module Ellen
     end
 
     def build
-      command_class.new
+      command_class.new(options)
     end
 
     private
