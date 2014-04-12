@@ -1,8 +1,6 @@
 module Ellen
   module Handlers
     class Help < Base
-      Ellen.handlers << self
-
       def call(message)
         case message
         when /help\z/

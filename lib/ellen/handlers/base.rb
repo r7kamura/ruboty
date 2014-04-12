@@ -11,6 +11,13 @@
 module Ellen
   module Handlers
     class Base
+      class << self
+        def inherited(child)
+          super
+          Ellen.handlers << child
+        end
+      end
+
       attr_reader :robot
 
       def initialize(robot)
