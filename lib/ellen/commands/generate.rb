@@ -1,18 +1,21 @@
 require "fileutils"
 
-# Generate ./ellen/ directory from our templates.
 module Ellen
   module Commands
     class Generate
       def call
-        if valid?
-          FileUtils.cp_r(templates_directory_path, destination_path)
-        else
-          Ellen.logger.warn("#{destination_path} already exists.")
-        end
+        valid? ? copy : warn
       end
 
       private
+
+      def copy
+        FileUtils.cp_r(templates_directory_path, destination_path)
+      end
+
+      def warn
+        Ellen.logger.warn("#{destination_path} already exists.")
+      end
 
       def templates_directory_path
         File.expand_path("../../../../templates", __FILE__)
