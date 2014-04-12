@@ -20,8 +20,8 @@ module Ellen
 
     def options
       Slop.parse!(arguments, help: true) do
-        on("g", "generate", "Generate a new chatterbot with ./ellen/ directory if specified.")
         on("a", "adapter=", "Take adapter name.")
+        on("g", "generate", "Generate a new chatterbot with ./ellen/ directory if specified.")
       end.to_hash
     end
     memoize :options
