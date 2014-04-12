@@ -24,6 +24,10 @@ module Ellen
         @robot = robot
         @options = options
       end
+
+      def say(body, options = {})
+        Ellen.logger.info("Not implemented #{self.class}##{__method__} was called")
+      end
     end
   end
 end
