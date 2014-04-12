@@ -5,7 +5,7 @@ module Ellen
 
       def run
         explain
-        loop { step }
+        listen
       end
 
       private
@@ -20,6 +20,10 @@ module Ellen
 
       def read
         gets.chomp
+      end
+
+      def listen
+        loop { step }
       end
 
       def step
