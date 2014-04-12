@@ -3,9 +3,8 @@ A chatterbot framework, inspired by Hubot.
 
 ## Dependencies
 * Ruby 1.9.3+
-* Redis
 
-## Installation
+## Install
 ```sh
 $ gem install ellen # Install `ellen` gem to your local machine
 ```
