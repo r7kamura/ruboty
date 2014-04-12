@@ -1,9 +1,11 @@
+require "ellen/adapter_builder"
 require "ellen/command_builder"
 require "ellen/commands/base"
 require "ellen/commands/generate"
 require "ellen/commands/run"
-require "ellen/version"
+require "ellen/engine"
 require "ellen/logger"
+require "ellen/version"
 
 module Ellen
   def self.logger

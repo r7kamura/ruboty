@@ -1,8 +1,8 @@
 module Ellen
   module Commands
-    class Run
+    class Run < Base
       def call
-        puts "#{self.class}##{__method__}"
+        Engine.new(options).run
       end
     end
   end
