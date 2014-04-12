@@ -5,13 +5,25 @@ module Ellen
   module Commands
     class Generate
       def call
-        FileUtils.cp_r(templates_directory_path, "./ellen")
+        if valid?
+          FileUtils.cp_r(templates_directory_path, destination_path)
+        else
+          puts "./ellen/ already exists."
+        end
       end
 
       private
 
       def templates_directory_path
         File.expand_path("../../../../templates", __FILE__)
+      end
+
+      def destination_path
+        "./ellen/"
+      end
+
+      def valid?
+        !File.exists?(destination_path)
       end
     end
   end
