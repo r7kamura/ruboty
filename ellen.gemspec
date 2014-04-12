@@ -8,9 +8,8 @@ Gem::Specification.new do |spec|
   spec.version       = Ellen::VERSION
   spec.authors       = ["Ryo Nakamura"]
   spec.email         = ["r7kamura@gmail.com"]
-  spec.summary       = %q{TODO: Write a short summary. Required.}
-  spec.description   = %q{TODO: Write a longer description. Optional.}
-  spec.homepage      = ""
+  spec.summary       = "A chatterbot framework, inspired by Hubot"
+  spec.homepage      = "https://github.com/r7kamura/ellen"
   spec.license       = "MIT"
 
   spec.files         = `git ls-files -z`.split("\x0")
