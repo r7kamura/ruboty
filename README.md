@@ -15,8 +15,8 @@ Usage: ellen [options]
     -l, --load          Load a ruby file before running.
     -h, --help          Display this help message.
 $ ellen --generate                  # Generate your new chatterbot with ./ellen/ directory
-$ cd ellen                          # Changes to ./ellen/
-$ vi Gemfile                        # Adds your favorite plugin gems
+$ cd ellen                          # Change to ./ellen/
+$ vi Gemfile                        # Add your favorite plugin gems
 $ bundle exec ellen --adapter=shell # Run your chatterbot with specified adapter
 ```
 
