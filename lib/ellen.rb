@@ -1,6 +1,7 @@
 require "active_support/core_ext/module/delegation"
 require "active_support/core_ext/string/inflections"
 require "bundler"
+require "dotenv"
 require "mem"
 require "slop"
 

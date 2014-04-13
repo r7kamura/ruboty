@@ -11,6 +11,7 @@ module Ellen
     end
 
     def run
+      dotenv
       bundle
       setup
       validate
@@ -37,6 +38,10 @@ module Ellen
 
     def bundle
       Bundler.require
+    end
+
+    def dotenv
+      Dotenv.load if options[:dotenv]
     end
 
     def setup
