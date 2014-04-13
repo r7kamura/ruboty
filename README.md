@@ -51,7 +51,8 @@ Here is the smallest example to deploy Ellen to Heroku.
 ```sh
 $ ellen --generate
 $ cd ellen
-$ echo "bot: bundle exec ellen --adapter my_adapter" > Procfile
+$ echo 'gem "ellen-my_adapter"' >> Gemfile
+$ echo 'bot: bundle exec ellen --adapter my_adapter' >> Procfile
 $ bundle install
 $ git init
 $ git commit -a -m "Initial commit"
