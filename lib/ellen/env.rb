@@ -1,0 +1,36 @@
+module Ellen
+  class Env
+    attr_reader :key, :description, :options
+
+    def initialize(key, description, options = {})
+      @key = key.to_s
+      @description = description
+      @options = options
+    end
+
+    def validate
+      error if required? && missing?
+    end
+
+    def to_usage
+      "    %-20s - %s" % [key, description]
+    end
+
+    private
+
+    def required?
+      !options[:optional]
+    end
+
+    def missing?
+      !ENV[key]
+    end
+
+    def error
+      raise MissingRequiredKeyError, %<ENV["#{key}"] is required but missing>
+    end
+
+    class MissingRequiredKeyError < StandardError
+    end
+  end
+end

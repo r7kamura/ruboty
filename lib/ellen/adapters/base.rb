@@ -16,6 +16,18 @@ module Ellen
         def inherited(child)
           Ellen.adapters[child.name.split("::").last.underscore] = child
         end
+
+        def env(key, description, options = {})
+          envs << Env.new(key, description, options)
+        end
+
+        def envs
+          @envs ||= []
+        end
+
+        def usage
+          envs.map(&:to_usage).join("\n")
+        end
       end
 
       attr_reader :robot, :options
@@ -27,6 +39,12 @@ module Ellen
 
       def say(body, options = {})
         Ellen.logger.info("Not implemented #{self.class}##{__method__} was called")
+      end
+
+      def validate
+        self.class.envs.each(&:validate)
+      rescue Env::MissingRequiredKeyError => exception
+        Ellen.die("#{exception}\n#{self.class.usage}")
       end
     end
   end

@@ -13,6 +13,7 @@ module Ellen
     def run
       bundle
       setup
+      validate
       adapt
     end
 
@@ -46,5 +47,9 @@ module Ellen
       Ellen.handlers.map {|handler_class| handler_class.new(self) }
     end
     memoize :handlers
+
+    def validate
+      adapter.validate
+    end
   end
 end
