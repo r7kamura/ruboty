@@ -4,24 +4,6 @@ A chatterbot framework, inspired by Hubot.
 ## Dependencies
 * Ruby 1.9.3+
 
-## Usage
-Here is the smallest example to deploy Ellen to Heroku.
-
-```sh
-$ gem install ellen
-$ ellen --generate
-$ cd ellen
-$ echo 'gem "ellen-my_adapter"' >> Gemfile
-$ echo 'bot: bundle exec ellen --adapter my_adapter' >> Procfile
-$ bundle install
-$ git init
-$ git commit -a -m "Initial commit"
-$ heroku create
-$ heroku scale bot=1
-$ heroku config:set FOO=1 BAR=2 BAZ=3
-$ git push heroku master
-```
-
 ## Adapter
 You can create your own favorite adapter from
 [Ellen::Adpaters::Base](https://github.com/r7kamura/ellen/blob/master/lib/ellen/adapters/base.rb)
@@ -51,3 +33,21 @@ gem "ellen-baz"
 Store config in envorinment variables.
 They are easy to change between deploys without changing any code.
 We recommend to put `.env` and run with `ellen --dotenv` option to manage them.
+
+## Deploy
+Here is the smallest example to deploy a simple chatterbot to Heroku.
+
+```sh
+$ gem install ellen
+$ ellen --generate
+$ cd ellen
+$ echo 'gem "ellen-my_adapter"' >> Gemfile
+$ echo 'bot: bundle exec ellen --adapter my_adapter' >> Procfile
+$ bundle install
+$ git init
+$ git commit -a -m "Initial commit"
+$ heroku create
+$ heroku scale bot=1
+$ heroku config:set FOO=1 BAR=2 BAZ=3
+$ git push heroku master
+```
