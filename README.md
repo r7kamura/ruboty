@@ -46,3 +46,8 @@ gem "ellen-foo"
 gem "ellen-bar"
 gem "ellen-baz"
 ```
+
+## Config
+Store config in envorinment variables.
+They are easy to change between deploys without changing any code.
+We recommend to put `.env` and run with `ellen --dotenv` option to manage them.
