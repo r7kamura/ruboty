@@ -20,5 +20,10 @@ $ vi Gemfile                        # Add your favorite plugin gems
 $ bundle exec ellen --adapter=shell # Run your chatterbot with specified adapter
 ```
 
-## Adapters
-* [ellen-hipchat](https://github.com/r7kamura/ellen-hipchat)
+## Adapter
+You can create your own favorite adapter from
+[Ellen::Adpaters::Base](https://github.com/r7kamura/ellen/blob/master/lib/ellen/adapters/base.rb)
+class with #run method. Please see the following real examples for more details.
+
+* [Ellen::Adapters::Hipchat](https://github.com/r7kamura/ellen-hipchat/blob/master/lib/ellen/adapters/hipchat.rb)
+* [Ellen::Adapters::Shell](https://github.com/r7kamura/ellen/blob/master/lib/ellen/adapters/shell.rb)
