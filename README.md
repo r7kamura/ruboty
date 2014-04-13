@@ -44,3 +44,19 @@ gem "ellen-foo"
 gem "ellen-bar"
 gem "ellen-baz"
 ```
+
+## Heroku
+Here is the smallest example to deploy Ellen to Heroku.
+
+```sh
+$ ellen --generate
+$ cd ellen
+$ echo "bot: bundle exec ellen --adapter my_adapter" > Procfile
+$ bundle install
+$ git init
+$ git commit -a -m "Initial commit"
+$ heroku create
+$ heroku scale bot=1
+$ heroku config:set FOO=1 BAR=2 BAZ=3
+$ git push heroku master
+```
