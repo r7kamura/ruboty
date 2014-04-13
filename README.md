@@ -33,3 +33,14 @@ You can create your own handlers to add new behaviors from
 [Ellen::Handlers::Base](https://github.com/r7kamura/ellen/blob/master/lib/ellen/handlers/base.rb) DSL.
 
 * [Ellen::Handlers::Help](https://github.com/r7kamura/ellen/blob/master/lib/ellen/handlers/help.rb)
+
+## Bundler
+All you need to use your favorite plugins is to write their names into Gemfile.
+Ellen will load them before running.
+
+```ruby
+# Gemfile
+gem "ellen-foo"
+gem "ellen-bar"
+gem "ellen-baz"
+```
