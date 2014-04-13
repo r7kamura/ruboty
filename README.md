@@ -7,6 +7,13 @@ A chatterbot framework, inspired by Hubot.
 ## Usage
 ```sh
 $ gem install ellen                 # Install `ellen` gem to your local machine
+$ ellen --help                      # Show usage with --help
+Usage: ellen [options]
+    -a, --adapter       Take adapter name.
+        --dotenv        Load .env before running.
+    -g, --generate      Generate a new chatterbot with ./ellen/ directory if specified.
+    -l, --load          Load a ruby file before running.
+    -h, --help          Display this help message.
 $ ellen --generate                  # Generate your new chatterbot with ./ellen/ directory
 $ cd ellen                          # Changes to ./ellen/
 $ vi Gemfile                        # Adds your favorite plugin gems
