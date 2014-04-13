@@ -1,3 +1,6 @@
+## 0.0.4
+* Add --dotenv option to load .env before running
+
 ## 0.0.3
 * Add env DSL to define adapter
 
