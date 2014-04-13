@@ -3,8 +3,9 @@
 # Example:
 #
 #   class MyHandler < Ellen::Handlers::Base
-#     def call(message)
-#       ... do your work ...
+#     on /kill\z/, command: true do |message|
+#       say "Good bye, cruel world..."
+#       exit
 #     end
 #   end
 #
