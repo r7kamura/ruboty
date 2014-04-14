@@ -9,7 +9,7 @@ You can create your own favorite adapter from
 [Ellen::Adpaters::Base](https://github.com/r7kamura/ellen/blob/master/lib/ellen/adapters/base.rb)
 class with #run method. Please see the following real examples for more details.
 
-* [Ellen::Adapters::Hipchat](https://github.com/r7kamura/ellen-hipchat/blob/master/lib/ellen/adapters/hipchat.rb)
+* [Ellen::Adapters::Hipchat](https://github.com/r7kamura/ellen-hipchat)
 * [Ellen::Adapters::Shell](https://github.com/r7kamura/ellen/blob/master/lib/ellen/adapters/shell.rb)
 
 ## Handler
@@ -17,6 +17,7 @@ You can create your own handlers to add new behaviors from
 [Ellen::Handlers::Base](https://github.com/r7kamura/ellen/blob/master/lib/ellen/handlers/base.rb) DSL.
 
 * [Ellen::Handlers::Help](https://github.com/r7kamura/ellen/blob/master/lib/ellen/handlers/help.rb)
+* [Ellen::Handlers::GoogleImage](https://github.com/r7kamura/ellen-google_image)
 
 ## Bundler
 All you need to use your favorite plugins is to write their names into Gemfile.
