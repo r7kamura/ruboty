@@ -16,6 +16,10 @@ module Ellen
       !!options[:all]
     end
 
+    def description
+      options[:description] || "(no description)"
+    end
+
     private
 
     def pattern_with(name)
