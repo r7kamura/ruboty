@@ -3,7 +3,7 @@
 # Example:
 #
 #   class MyHandler < Ellen::Handlers::Base
-#     on /kill\z/, command: true do |message|
+#     on /kill\z/ do |message|
 #       say "Good bye, cruel world..."
 #       exit
 #     end
