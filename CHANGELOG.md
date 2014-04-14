@@ -1,3 +1,6 @@
+## 0.0.6
+* `ellen help` to show actions list
+
 ## 0.0.5
 * Now Action can access to MatchData object via Message
 * ENV["ROBOT_NAME"] or "ellen" is default name
