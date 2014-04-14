@@ -1,6 +1,6 @@
 module Ellen
   class Message
-    attr_reader :body, :source, :command
+    attr_reader :body, :command, :match_data, :source
 
     def initialize(options)
       @body = options[:body]
@@ -9,7 +9,17 @@ module Ellen
     end
 
     def match(pattern, options = {})
-      (!options[:command] || command) && pattern === body
+      if options[:command] && !command
+        false
+      else
+        (pattern === body).tap do
+          @match_data = Regexp.last_match
+        end
+      end
+    end
+
+    def [](index)
+      match_data[index]
     end
   end
 end
