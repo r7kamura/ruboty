@@ -8,14 +8,8 @@ module Ellen
       @command = options[:command]
     end
 
-    def match(pattern, options = {})
-      if options[:command] && !command
-        false
-      else
-        (pattern === body).tap do
-          @match_data = Regexp.last_match
-        end
-      end
+    def match(pattern)
+      @match_data = pattern.match(body)
     end
 
     def [](index)

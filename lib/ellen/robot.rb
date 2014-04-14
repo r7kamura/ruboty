@@ -1,5 +1,7 @@
 module Ellen
   class Robot
+    DEFAULT_ROBOT_NAME = "ellen"
+
     include Mem
 
     delegate :say, to: :adapter
@@ -23,6 +25,10 @@ module Ellen
       handlers.each do |handler|
         handler.call(message)
       end
+    end
+
+    def name
+      ENV["ROBOT_NAME"] || DEFAULT_ROBOT_NAME
     end
 
     private
