@@ -13,7 +13,7 @@ module Ellen
     end
 
     def to_usage
-      "    %-20s - %s" % [key, description]
+      "    %-30s - %s" % [key, description]
     end
 
     private
