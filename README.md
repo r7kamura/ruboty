@@ -9,8 +9,9 @@ You can create your own favorite adapter from
 [Ellen::Adpaters::Base](https://github.com/r7kamura/ellen/blob/master/lib/ellen/adapters/base.rb)
 class with #run method. Please see the following real examples for more details.
 
-* [Ellen::Adapters::Hipchat](https://github.com/r7kamura/ellen-hipchat)
 * [Ellen::Adapters::Shell](https://github.com/r7kamura/ellen/blob/master/lib/ellen/adapters/shell.rb)
+* [Ellen::Adapters::Hipchat](https://github.com/r7kamura/ellen-hipchat)
+* [Ellen::Adapters::Twitter](https://github.com/r7kamura/ellen-twitter)
 
 ## Handler
 You can create your own handlers to add new behaviors from
