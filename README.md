@@ -54,3 +54,6 @@ $ heroku scale bot=1
 $ heroku config:set FOO=1 BAR=2 BAZ=3
 $ git push heroku master
 ```
+
+## Screenshot
+![](https://raw.githubusercontent.com/r7kamura/ellen/master/images/screenshot.png)
