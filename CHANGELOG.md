@@ -1,3 +1,6 @@
+## 0.0.7
+* Add PING handler
+
 ## 0.0.6
 * `ellen help` to show actions list
 
