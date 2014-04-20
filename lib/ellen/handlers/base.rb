@@ -19,8 +19,8 @@ module Ellen
           Ellen.handlers << child
         end
 
-        def on(pattern, options = {}, &block)
-          actions << Action.new(pattern, options, &block)
+        def on(pattern, options = {})
+          actions << Action.new(pattern, options)
         end
 
         def actions

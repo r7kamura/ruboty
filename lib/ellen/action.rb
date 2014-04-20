@@ -1,15 +1,14 @@
 module Ellen
   class Action
-    attr_reader :block, :options, :pattern
+    attr_reader :options, :pattern
 
-    def initialize(pattern, options = {}, &block)
+    def initialize(pattern, options = {})
       @pattern = pattern
       @options = options
-      @block = block
     end
 
     def call(handler, message)
-      handler.robot.instance_exec(message, &block) if message.match pattern_with(handler.robot.name)
+      handler.send(name, message) if message.match pattern_with(handler.robot.name)
     end
 
     def all?
@@ -18,6 +17,10 @@ module Ellen
 
     def description
       options[:description] || "(no description)"
+    end
+
+    def name
+      options[:name]
     end
 
     private
