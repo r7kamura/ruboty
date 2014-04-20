@@ -5,3 +5,6 @@ rvm:
 branches:
   only:
     - master
+env:
+  global:
+    secure: IFNYget7BZa+hDw+q0QZDtwkwwngTz/F96pB9gvE+U5y7UUAk6cI3dPEj0LYxRQZyLLi8R+aQ+MXY5Vw2q3vSQCUc/IGt6N/7O5L+X0ef8BzEiud4sLAGP3kXVgyAg1UtLjtLZcFWlQGvgj590r7X+1CgYHeLsnmXhXBVeBBYag=

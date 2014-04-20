@@ -1,6 +1,11 @@
 require "simplecov"
 SimpleCov.start
 
+if ENV["CI"]
+  require "codeclimate-test-reporter"
+  CodeClimate::TestReporter.start
+end
+
 require "ellen"
 
 RSpec.configure do |config|
