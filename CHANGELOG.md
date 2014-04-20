@@ -1,3 +1,7 @@
+## 0.0.8
+* Mount Brain
+* Change handler interface
+
 ## 0.0.7
 * Add PING handler
 
