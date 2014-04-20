@@ -21,6 +21,7 @@ Gem::Specification.new do |spec|
   spec.add_dependency "dotenv"
   spec.add_dependency "mem"
   spec.add_dependency "slop"
+  spec.add_development_dependency "codeclimate-test-reporter", ">= 0.3.0"
   spec.add_development_dependency "pry"
   spec.add_development_dependency "rake"
   spec.add_development_dependency "rspec", "2.14.1"
