@@ -1,4 +1,5 @@
-# Ellen
+# Ellen [![Build Status](https://travis-ci.org/r7kamura/ellen.png)](https://travis-ci.org/r7kamura/ellen) [![Code Climate](https://codeclimate.com/github/r7kamura/ellen.png)](https://codeclimate.com/github/r7kamura/ellen) [![Code Climate](https://codeclimate.com/github/r7kamura/ellen.png)](https://codeclimate.com/github/r7kamura/ellen)
+
 A chatterbot framework, inspired by Hubot.
 
 ## Dependencies
