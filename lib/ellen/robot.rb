@@ -31,6 +31,11 @@ module Ellen
       ENV["ROBOT_NAME"] || DEFAULT_ROBOT_NAME
     end
 
+    def brain
+      Brains::Base.find_class.new
+    end
+    memoize :brain
+
     private
 
     def adapt
