@@ -5,6 +5,10 @@ module Ellen
     class Shell < Base
       PROMPT = "> "
 
+      SOURCE = "shell"
+
+      USAGE = "Type `exit` or `quit` to end the session."
+
       attr_accessor :stopped
 
       def run
@@ -19,7 +23,7 @@ module Ellen
       private
 
       def explain
-        Ellen.logger.info("Type `exit` or `quit` to end the session.")
+        Ellen.logger.info(USAGE)
       end
 
       def read
@@ -37,12 +41,8 @@ module Ellen
         when "exit", "quit"
           stop
         else
-          robot.receive(body: body, source: source)
+          robot.receive(body: body, source: SOURCE)
         end
-      end
-
-      def source
-        "shell user"
       end
 
       def stopped?
