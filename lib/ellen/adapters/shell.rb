@@ -11,13 +11,13 @@ module Ellen
       end
 
       def say(body, options = {})
-        puts body
+        Ellen.logger.info(body)
       end
 
       private
 
       def explain
-        puts "Type `exit` or `quit` to end the session."
+        Ellen.logger.info("Type `exit` or `quit` to end the session.")
       end
 
       def read
@@ -35,7 +35,7 @@ module Ellen
         when "exit", "quit"
           exit
         else
-          robot.receive(body: body, source: source, command: true)
+          robot.receive(body: body, source: source)
         end
       end
 
