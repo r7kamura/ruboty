@@ -1,5 +1,9 @@
 module Ellen
   class AdapterBuilder
+    def self.adapter_classes
+      @adapter_classes ||= []
+    end
+
     attr_reader :robot, :options
 
     def initialize(robot, options)
@@ -14,19 +18,7 @@ module Ellen
     private
 
     def adapter_class
-      Ellen.adapters[name] or die
-    end
-
-    def name
-      options[:adapter] || default_name
-    end
-
-    def default_name
-      "shell"
-    end
-
-    def die
-      Ellen.die("No adapter is defined for `#{name}`")
+      self.class.adapter_classes.last
     end
   end
 end

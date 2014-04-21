@@ -48,7 +48,7 @@ $ gem install ellen
 $ ellen --generate
 $ cd ellen
 $ echo 'gem "ellen-my_adapter"' >> Gemfile
-$ echo 'bot: bundle exec ellen --adapter my_adapter' >> Procfile
+$ echo 'bot: bundle exec ellen' >> Procfile
 $ bundle install
 $ git init
 $ git add .

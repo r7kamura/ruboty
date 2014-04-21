@@ -13,8 +13,8 @@ module Ellen
   module Adapters
     class Base
       class << self
-        def inherited(child)
-          Ellen.adapters[child.name.split("::").last.underscore] = child
+        def inherited(child_class)
+          Ellen::AdapterBuilder.adapter_classes << child_class
         end
 
         def env(key, description, options = {})
