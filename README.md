@@ -11,6 +11,7 @@ You can create your own favorite adapter from
 class with #run method. Please see the following real examples for more details.
 
 * [Ellen::Adapters::Shell](https://github.com/r7kamura/ellen/blob/master/lib/ellen/adapters/shell.rb)
+* [Ellen::Adapters::Slack](https://github.com/r7kamura/ellen-slack)
 * [Ellen::Adapters::Hipchat](https://github.com/r7kamura/ellen-hipchat)
 * [Ellen::Adapters::Twitter](https://github.com/r7kamura/ellen-twitter)
 
