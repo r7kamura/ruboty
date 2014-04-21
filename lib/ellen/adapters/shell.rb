@@ -3,6 +3,8 @@ require "readline"
 module Ellen
   module Adapters
     class Shell < Base
+      PROMPT = "> "
+
       def run
         explain
         listen
@@ -18,16 +20,8 @@ module Ellen
         puts "Type `exit` or `quit` to end the session."
       end
 
-      def prompt
-        @prompt ||= "> "
-      end
-
-      def prompt=(str)
-        @prompt = str
-      end
-
       def read
-        Readline.readline(prompt, true)
+        Readline.readline(PROMPT, true)
       end
 
       def listen
@@ -37,7 +31,6 @@ module Ellen
       end
 
       def step
-        prompt
         case body = read
         when "exit", "quit"
           exit
