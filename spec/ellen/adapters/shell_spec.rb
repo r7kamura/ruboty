@@ -3,10 +3,6 @@ require "spec_helper"
 describe Ellen::Adapters::Shell do
   before do
     Ellen.logger.stub(:info)
-
-    adapter.stub(:exit) do
-      adapter.stop
-    end
   end
 
   let(:adapter) do
