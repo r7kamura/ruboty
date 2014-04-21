@@ -1,3 +1,6 @@
+## 0.0.9
+* Adapt mention name to `@<name>: <text>` format
+
 ## 0.0.8
 * Mount Brain
 * Change handler interface
