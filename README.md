@@ -20,6 +20,7 @@ You can create your own handlers to add new behaviors from
 
 * [Ellen::Handlers::Help](https://github.com/r7kamura/ellen/blob/master/lib/ellen/handlers/help.rb)
 * [Ellen::Handlers::Ping](https://github.com/r7kamura/ellen/blob/master/lib/ellen/handlers/ping.rb)
+* [Ellen::Handlers::Cron](https://github.com/r7kamura/ellen-cron)
 * [Ellen::Handlers::GoogleImage](https://github.com/r7kamura/ellen-google_image)
 
 ## Bundler
