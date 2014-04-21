@@ -27,6 +27,10 @@ module Ellen
       []
     end
     memoize :handlers
+
+    def actions
+      handlers.map(&:actions).flatten.sort_by(&:all?)
+    end
   end
 end
 
