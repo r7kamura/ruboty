@@ -30,9 +30,9 @@ Ellen will load them before running.
 
 ```ruby
 # Gemfile
-gem "ellen-foo"
-gem "ellen-bar"
-gem "ellen-baz"
+gem "ellen-cron"
+gem "ellen-google_image"
+gem "ellen-slack"
 ```
 
 ## Config
