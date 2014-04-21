@@ -54,9 +54,9 @@ $ git init
 $ git add .
 $ git commit -m "Initial commit"
 $ heroku create
-$ heroku scale bot=1
 $ heroku config:set FOO=1 BAR=2 BAZ=3
 $ git push heroku master
+$ heroku scale bot=1
 ```
 
 ## Screenshot
