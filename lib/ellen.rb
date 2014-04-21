@@ -18,11 +18,6 @@ module Ellen
       exit(1)
     end
 
-    def adapters
-      {}
-    end
-    memoize :adapters
-
     def handlers
       []
     end
