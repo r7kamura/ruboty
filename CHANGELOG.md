@@ -1,3 +1,6 @@
+## 0.1.0
+* Deprecate --adapter option
+
 ## 0.0.9
 * Adapt mention name to `@<name>: <text>` format
 
