@@ -6,11 +6,7 @@ describe Ellen::AdapterBuilder do
   end
 
   let(:robot) do
-    Ellen::Robot.new(options)
-  end
-
-  let(:options) do
-    {}
+    Ellen::Robot.new
   end
 
   describe "#build" do
