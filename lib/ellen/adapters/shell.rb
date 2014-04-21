@@ -5,6 +5,8 @@ module Ellen
     class Shell < Base
       PROMPT = "> "
 
+      attr_accessor :stopped
+
       def run
         explain
         listen
@@ -25,15 +27,15 @@ module Ellen
       end
 
       def listen
-        loop { step }
+        step until stopped?
       rescue Interrupt
-        exit
+        stop
       end
 
       def step
         case body = read
         when "exit", "quit"
-          exit
+          stop
         else
           robot.receive(body: body, source: source)
         end
@@ -41,6 +43,14 @@ module Ellen
 
       def source
         "shell user"
+      end
+
+      def stopped?
+        !!stopped
+      end
+
+      def stop
+        self.stopped = true
       end
     end
   end
