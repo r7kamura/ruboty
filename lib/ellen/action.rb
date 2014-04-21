@@ -29,7 +29,7 @@ module Ellen
       if all?
         /\A#{pattern}/
       else
-        /\A@?#{Regexp.escape(name)}\s*#{pattern}/
+        /\A@?#{Regexp.escape(name)}:?\s*#{pattern}/
       end
     end
   end
