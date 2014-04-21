@@ -4,15 +4,14 @@ module Ellen
       @adapter_classes ||= []
     end
 
-    attr_reader :robot, :options
+    attr_reader :robot
 
-    def initialize(robot, options)
+    def initialize(robot)
       @robot = robot
-      @options = options
     end
 
     def build
-      adapter_class.new(robot, options)
+      adapter_class.new(robot)
     end
 
     private

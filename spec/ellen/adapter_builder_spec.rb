@@ -2,7 +2,7 @@ require "spec_helper"
 
 describe Ellen::AdapterBuilder do
   let(:builder) do
-    described_class.new(robot, options)
+    described_class.new(robot)
   end
 
   let(:robot) do

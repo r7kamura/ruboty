@@ -30,11 +30,10 @@ module Ellen
         end
       end
 
-      attr_reader :robot, :options
+      attr_reader :robot
 
-      def initialize(robot, options)
+      def initialize(robot)
         @robot = robot
-        @options = options
       end
 
       def say(body, options = {})

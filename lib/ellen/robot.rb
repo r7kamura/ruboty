@@ -43,7 +43,7 @@ module Ellen
     end
 
     def adapter
-      AdapterBuilder.new(self, options).build
+      AdapterBuilder.new(self).build
     end
     memoize :adapter
 
