@@ -16,10 +16,6 @@ module Ellen
           @brain_classes ||= []
         end
       end
-
-      def data
-        @data ||= {}
-      end
     end
   end
 end

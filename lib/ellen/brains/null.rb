@@ -1,7 +1,8 @@
 module Ellen
   module Brains
     class Null < Base
-      def save
+      def data
+        @data ||= {}
       end
     end
   end
