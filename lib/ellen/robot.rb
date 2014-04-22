@@ -16,6 +16,7 @@ module Ellen
       dotenv
       bundle
       setup
+      remember
       validate
       adapt
     end
@@ -66,6 +67,10 @@ module Ellen
 
     def validate
       adapter.validate
+    end
+
+    def remember
+      brain
     end
   end
 end
