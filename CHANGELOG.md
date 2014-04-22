@@ -1,3 +1,6 @@
+## 0.1.1
+* Improve Brain interface
+
 ## 0.1.0
 * Deprecate --adapter option
 
