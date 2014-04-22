@@ -1,6 +1,6 @@
 module Ellen
   module Brains
-    class Null < Base
+    class Memory < Base
       def data
         @data ||= {}
       end
