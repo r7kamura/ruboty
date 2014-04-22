@@ -17,7 +17,6 @@ module Ellen
       bundle
       setup
       remember
-      validate
       adapt
     end
 
@@ -64,10 +63,6 @@ module Ellen
       Ellen.handlers.map {|handler_class| handler_class.new(self) }
     end
     memoize :handlers
-
-    def validate
-      adapter.validate
-    end
 
     def remember
       brain

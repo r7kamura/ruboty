@@ -29,8 +29,5 @@ module Ellen
     def error
       raise MissingRequiredKeyError, %<ENV["#{key}"] is required but missing>
     end
-
-    class MissingRequiredKeyError < StandardError
-    end
   end
 end

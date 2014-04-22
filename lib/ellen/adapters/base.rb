@@ -12,21 +12,11 @@
 module Ellen
   module Adapters
     class Base
+      include Env::Validatable
+
       class << self
         def inherited(child_class)
           Ellen::AdapterBuilder.adapter_classes << child_class
-        end
-
-        def env(key, description, options = {})
-          envs << Env.new(key, description, options)
-        end
-
-        def envs
-          @envs ||= []
-        end
-
-        def usage
-          envs.map(&:to_usage).join("\n")
         end
       end
 
@@ -34,16 +24,11 @@ module Ellen
 
       def initialize(robot)
         @robot = robot
+        validate
       end
 
       def say(body, options = {})
         Ellen.logger.info("Not implemented #{self.class}##{__method__} was called")
-      end
-
-      def validate
-        self.class.envs.each(&:validate)
-      rescue Env::MissingRequiredKeyError => exception
-        Ellen.die("#{exception}\n#{self.class.usage}")
       end
     end
   end

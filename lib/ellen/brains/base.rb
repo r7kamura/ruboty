@@ -1,6 +1,8 @@
 module Ellen
   module Brains
     class Base
+      include Env::Validatable
+
       class << self
         def inherited(child)
           brain_classes << child
@@ -15,6 +17,10 @@ module Ellen
         def brain_classes
           @brain_classes ||= []
         end
+      end
+
+      def initialize
+        validate
       end
     end
   end
