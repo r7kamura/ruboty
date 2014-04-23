@@ -20,7 +20,7 @@ module Ellen
       def validate
         self.class.envs.each(&:validate)
       rescue MissingRequiredKeyError => exception
-        Ellen.die("#{exception}\n#{self.class.usage}")
+        raise ValidationError, "#{exception}\n#{self.class.usage}"
       end
     end
   end
