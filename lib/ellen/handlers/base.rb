@@ -1,14 +1,3 @@
-# Abstract class to be inherited from handler class.
-#
-# Example:
-#
-#   class MyHandler < Ellen::Handlers::Base
-#     on /kill\z/ do |message|
-#       say "Good bye, cruel world..."
-#       exit
-#     end
-#   end
-#
 module Ellen
   module Handlers
     class Base
