@@ -25,8 +25,6 @@ module Ellen
       def initialize(robot)
         @robot = robot
         validate
-      rescue ValidationError => exception
-        Ellen.die(exception)
       end
     end
   end

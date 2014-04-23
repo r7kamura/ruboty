@@ -22,6 +22,12 @@ module Ellen
       rescue MissingRequiredKeyError => exception
         raise ValidationError, "#{exception}\n#{self.class.usage}"
       end
+
+      def validate!
+        validate
+      rescue ValidationError => exception
+        Ellen.die(exception)
+      end
     end
   end
 end

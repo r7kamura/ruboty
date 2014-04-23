@@ -18,9 +18,7 @@ module Ellen
       end
 
       def initialize
-        validate
-      rescue ValidationError => exception
-        Ellen.die(exception)
+        validate!
       end
     end
   end
