@@ -12,8 +12,6 @@ module Ellen
           brain_classes.last
         end
 
-        private
-
         def brain_classes
           @brain_classes ||= []
         end
