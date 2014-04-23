@@ -28,10 +28,6 @@ module Ellen
       rescue ValidationError => exception
         Ellen.die(exception)
       end
-
-      def say(body, options = {})
-        Ellen.logger.info("Not implemented #{self.class}##{__method__} was called")
-      end
     end
   end
 end
