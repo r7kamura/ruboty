@@ -12,6 +12,7 @@ Adapter hooks up your robot to chat services.
 * [Ellen::Adapters::Slack](https://github.com/r7kamura/ellen-slack)
 * [Ellen::Adapters::Hipchat](https://github.com/r7kamura/ellen-hipchat)
 * [Ellen::Adapters::Twitter](https://github.com/r7kamura/ellen-twitter)
+* [Ellen::Adapters::Idobara](https://github.com/hanachin/ellen-idobata)
 
 ## Brain
 Brain persists your robot's memory.
