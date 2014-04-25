@@ -1,3 +1,6 @@
+## 0.1.2
+* Make Handler validatable
+
 ## 0.1.1
 * Improve Brain interface
 
