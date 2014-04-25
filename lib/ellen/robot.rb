@@ -17,6 +17,7 @@ module Ellen
       bundle
       setup
       remember
+      handle
       adapt
     end
 
@@ -66,6 +67,10 @@ module Ellen
 
     def remember
       brain
+    end
+
+    def handle
+      handlers
     end
   end
 end
