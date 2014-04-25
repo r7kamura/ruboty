@@ -1,3 +1,6 @@
+## 0.1.3
+* Change Ellen::Message interface
+
 ## 0.1.2
 * Make Handler validatable
 
