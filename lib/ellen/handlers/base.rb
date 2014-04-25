@@ -18,10 +18,13 @@ module Ellen
         memoize :actions
       end
 
+      include Env::Validatable
+
       attr_reader :robot
 
       def initialize(robot)
         @robot = robot
+        validate!
       end
 
       def call(message)
