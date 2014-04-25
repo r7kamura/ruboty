@@ -1,11 +1,11 @@
 module Ellen
   class Message
-    attr_reader :body, :command, :match_data, :source
+    attr_reader :body, :match_data, :from, :to
 
     def initialize(options)
       @body = options[:body]
-      @source = options[:source]
-      @command = options[:command]
+      @from = options[:from]
+      @to = options[:to]
     end
 
     def match(pattern)
