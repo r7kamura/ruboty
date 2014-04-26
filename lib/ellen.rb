@@ -31,7 +31,9 @@ module Ellen
 end
 
 require "ellen/action"
+require "ellen/actions/base"
 require "ellen/actions/help"
+require "ellen/actions/ping"
 require "ellen/adapter_builder"
 require "ellen/env"
 require "ellen/env/missing_required_key_error"
