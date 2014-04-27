@@ -1,3 +1,6 @@
+## 0.2.0
+* Change adapter & message interface
+
 ## 0.1.3
 * Change Ellen::Message interface
 
