@@ -2,7 +2,7 @@ module Ellen
   module Actions
     class Ping < Base
       def call
-        robot.say(returned_pong)
+        robot.say(returned_pong, from: message.from, to: message.to)
       end
 
       private

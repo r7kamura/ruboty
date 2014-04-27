@@ -8,7 +8,7 @@ module Ellen
       end
 
       def call
-        robot.say(action_descriptions.join("\n"), to: message.from)
+        robot.say(action_descriptions.join("\n"), from: message.from, to: message.to)
       end
 
       private

@@ -6,15 +6,17 @@ describe Ellen::Handlers::Ping do
   end
 
   describe "#ping" do
-    {
-      "@ellen ping" => "pong",
-      "@ellen Ping" => "Pong",
-      "@ellen PING" => "PONG",
-    }.each do |input, output|
-      it "responds to `#{input}` and says `#{output}`" do
-        robot.should_receive(:say).with(output)
-        robot.receive(body: input)
-      end
+    let(:from) do
+      "alice"
+    end
+
+    let(:to) do
+      "#general"
+    end
+
+    it "returns PONG to PING" do
+      robot.should_receive(:say).with("pong", from: from, to: to)
+      robot.receive(body: "@ellen ping", from: from, to: to)
     end
   end
 end
