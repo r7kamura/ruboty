@@ -17,7 +17,7 @@ module Ellen
       end
 
       def say(message)
-        Ellen.logger.info(message)
+        Ellen.logger.info(message[:body])
       end
 
       private
