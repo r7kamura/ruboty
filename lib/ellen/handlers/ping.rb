@@ -4,7 +4,7 @@ module Ellen
       on /ping\z/i, name: "ping", description: "Return PONG to PING"
 
       def ping(message)
-        Ellen::Actions::Ping.new(message: message, robot: robot).call
+        Ellen::Actions::Ping.new(message).call
       end
     end
   end

@@ -1,14 +1,8 @@
 module Ellen
   module Actions
-    class Help
-      attr_reader :options
-
-      def initialize(options)
-        @options = options
-      end
-
+    class Help < Base
       def call
-        robot.say(body: body, from: message.from, to: message.to)
+        message.reply(body)
       end
 
       private
@@ -20,17 +14,9 @@ module Ellen
       def action_descriptions
         Ellen.actions.map do |action|
           prefix = ""
-          prefix << robot.name << " " unless  action.all?
+          prefix << message.robot.name << " " unless  action.all?
           "%-#{pattern_max_length + prefix.size}s - #{action.description}" % "#{prefix}#{action.pattern.inspect}"
         end
-      end
-
-      def robot
-        options[:robot]
-      end
-
-      def message
-        options[:message]
       end
 
       def pattern_max_length

@@ -1,10 +1,17 @@
 module Ellen
   class Message
-    attr_reader :body, :match_data, :from, :to
+    attr_reader(
+      :body,
+      :from,
+      :match_data,
+      :robot,
+      :to,
+    )
 
     def initialize(options)
       @body = options[:body]
       @from = options[:from]
+      @robot = options[:robot]
       @to = options[:to]
     end
 
@@ -14,6 +21,11 @@ module Ellen
 
     def [](index)
       match_data[index]
+    end
+
+    def reply(body, options = {})
+      attributes = { body: body, from: from, to: to }.merge(options)
+      robot.say(attributes)
     end
   end
 end

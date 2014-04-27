@@ -22,7 +22,7 @@ module Ellen
     end
 
     def receive(attributes)
-      message = Message.new(attributes)
+      message = Message.new(attributes.merge(robot: self))
       handlers.each do |handler|
         handler.call(message)
       end

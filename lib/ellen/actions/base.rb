@@ -1,20 +1,10 @@
 module Ellen
   module Actions
     class Base
-      attr_reader :options
+      attr_reader :message
 
-      def initialize(options)
-        @options = options
-      end
-
-      private
-
-      def robot
-        options[:robot]
-      end
-
-      def message
-        options[:message]
+      def initialize(message)
+        @message = message
       end
     end
   end
