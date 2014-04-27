@@ -11,6 +11,11 @@ module Ellen
 
       attr_accessor :stopped
 
+      def initialize(*args)
+        super
+        remember
+      end
+
       def run
         explain
         listen
@@ -27,7 +32,9 @@ module Ellen
       end
 
       def read
-        Readline.readline(PROMPT, true)
+        Readline.readline(PROMPT, true).tap do |line|
+          history_file.puts(line)
+        end
       end
 
       def listen
@@ -51,6 +58,24 @@ module Ellen
 
       def stop
         self.stopped = true
+      end
+
+      def remember
+        if history_pathname.exist?
+          history_pathname.each_line do |line|
+            Readline::HISTORY << line.rstrip
+          end
+        end
+      end
+
+      def history_pathname
+        @history_pathname ||= Pathname.new("~/.ellen_history").expand_path
+      end
+
+      def history_file
+        @history_file ||= history_pathname.open("a").tap do |file|
+          file.sync = true
+        end
       end
     end
   end
