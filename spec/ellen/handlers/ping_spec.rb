@@ -15,7 +15,7 @@ describe Ellen::Handlers::Ping do
     end
 
     it "returns PONG to PING" do
-      robot.should_receive(:say).with("pong", from: from, to: to)
+      robot.should_receive(:say).with(body: "pong", from: from, to: to)
       robot.receive(body: "@ellen ping", from: from, to: to)
     end
   end

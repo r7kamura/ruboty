@@ -2,17 +2,17 @@ module Ellen
   module Actions
     class Ping < Base
       def call
-        robot.say(returned_pong, from: message.from, to: message.to)
+        robot.say(body: pong, from: message.from, to: message.to)
       end
 
       private
 
-      def given_ping
+      def ping
         message.body[-4..-1]
       end
 
-      def returned_pong
-        given_ping.gsub(/i/i, "i" => "o", "I" => "O")
+      def pong
+        ping.gsub(/i/i, "i" => "o", "I" => "O")
       end
     end
   end

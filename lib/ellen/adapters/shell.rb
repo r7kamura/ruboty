@@ -16,8 +16,8 @@ module Ellen
         listen
       end
 
-      def say(body, options = {})
-        Ellen.logger.info(body)
+      def say(message)
+        Ellen.logger.info(message)
       end
 
       private

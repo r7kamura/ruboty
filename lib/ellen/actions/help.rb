@@ -8,10 +8,14 @@ module Ellen
       end
 
       def call
-        robot.say(action_descriptions.join("\n"), from: message.from, to: message.to)
+        robot.say(body: body, from: message.from, to: message.to)
       end
 
       private
+
+      def body
+        action_descriptions.join("\n")
+      end
 
       def action_descriptions
         Ellen.actions.map do |action|

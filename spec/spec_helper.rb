@@ -6,6 +6,7 @@ if ENV["CI"]
   CodeClimate::TestReporter.start
 end
 
+require "active_support/core_ext/string/strip"
 require "ellen"
 
 RSpec.configure do |config|
