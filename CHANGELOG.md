@@ -1,3 +1,6 @@
+## 0.2.1
+* Store shell history in ~/.ellen_history
+
 ## 0.2.0
 * Change adapter & message interface
 
