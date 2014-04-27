@@ -16,8 +16,8 @@ describe Ellen::Handlers::Help do
 
     let(:body) do
       <<-EOS.strip_heredoc.strip
-        ellen /help\\z/i - Show this help message
-        ellen /ping\\z/i - Return PONG to PING
+        ellen /help( me)?\\z/i - Show this help message
+        ellen /ping\\z/i       - Return PONG to PING
       EOS
     end
 

@@ -50,7 +50,7 @@ describe Ellen::Adapters::Shell do
   describe "#say" do
     it "shows given message body on stdout" do
       Ellen.logger.should_receive(:info).with("a")
-      adapter.say("a")
+      adapter.say(body: "a")
     end
   end
 end
