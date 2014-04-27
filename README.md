@@ -8,11 +8,11 @@ A chatterbot framework, inspired by Hubot.
 ## Adapter
 Adapter hooks up your robot to chat services.
 
+* [Ellen::Adapters::Hipchat](https://github.com/r7kamura/ellen-hipchat)
+* [Ellen::Adapters::Idobata](https://github.com/hanachin/ellen-idobata)
 * [Ellen::Adapters::Shell](https://github.com/r7kamura/ellen/blob/master/lib/ellen/adapters/shell.rb)
 * [Ellen::Adapters::Slack](https://github.com/r7kamura/ellen-slack)
-* [Ellen::Adapters::Hipchat](https://github.com/r7kamura/ellen-hipchat)
 * [Ellen::Adapters::Twitter](https://github.com/r7kamura/ellen-twitter)
-* [Ellen::Adapters::Idobata](https://github.com/hanachin/ellen-idobata)
 
 ## Brain
 Brain persists your robot's memory.
@@ -23,11 +23,11 @@ Brain persists your robot's memory.
 ## Handler
 Handler provides various behaviors to your robot.
 
+* [Ellen::Handlers::Cron](https://github.com/r7kamura/ellen-cron)
+* [Ellen::Handlers::Github](https://github.com/r7kamura/ellen-github)
+* [Ellen::Handlers::GoogleImage](https://github.com/r7kamura/ellen-google_image)
 * [Ellen::Handlers::Help](https://github.com/r7kamura/ellen/blob/master/lib/ellen/handlers/help.rb)
 * [Ellen::Handlers::Ping](https://github.com/r7kamura/ellen/blob/master/lib/ellen/handlers/ping.rb)
-* [Ellen::Handlers::Cron](https://github.com/r7kamura/ellen-cron)
-* [Ellen::Handlers::GoogleImage](https://github.com/r7kamura/ellen-google_image)
-* [Ellen::Handlers::Github](https://github.com/r7kamura/ellen-github)
 
 ## Configuration
 Store configuration value in envorinment variables.
