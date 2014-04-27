@@ -27,6 +27,7 @@ Handler provides various behaviors to your robot.
 * [Ellen::Handlers::Ping](https://github.com/r7kamura/ellen/blob/master/lib/ellen/handlers/ping.rb)
 * [Ellen::Handlers::Cron](https://github.com/r7kamura/ellen-cron)
 * [Ellen::Handlers::GoogleImage](https://github.com/r7kamura/ellen-google_image)
+* [Ellen::Handlers::Github](https://github.com/r7kamura/ellen-github)
 
 ## Configuration
 Store configuration value in envorinment variables.
