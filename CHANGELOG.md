@@ -1,3 +1,6 @@
+## 0.2.2
+* Now `Ellen::Robot#say(message)` can use `message[:original]`
+
 ## 0.2.1
 * Store shell history in ~/.ellen_history
 
