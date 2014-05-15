@@ -2,7 +2,7 @@ module Ellen
   module Actions
     class Help < Base
       def call
-        message.reply(body)
+        message.reply(body, code: true)
       end
 
       private

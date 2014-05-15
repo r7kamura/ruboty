@@ -24,6 +24,7 @@ describe Ellen::Handlers::Help do
     it "responds to `@ellen help` and says each handler's usage" do
       robot.should_receive(:say).with(
         body: body,
+        code: true,
         from: to,
         to: from,
         original: {
