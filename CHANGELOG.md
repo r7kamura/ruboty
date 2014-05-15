@@ -1,3 +1,6 @@
+## 0.2.3
+* Help message is formatted if adapter supported
+
 ## 0.2.2
 * Now `Ellen::Robot#say(message)` can use `message[:original]`
 
