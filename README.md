@@ -50,17 +50,14 @@ gem "ellen-slack"
 Here is the smallest example to deploy a simple chatterbot to Heroku.
 
 ```sh
-$ gem install ellen
-$ ellen --generate
-$ cd ellen
-$ echo 'gem "ellen-my_adapter"' >> Gemfile
+$ echo 'source "https://rubygesm.org"' >> Gemfile
+$ echo 'gem "ellen"' >> Gemfile
 $ echo 'bot: bundle exec ellen' >> Procfile
 $ bundle install
 $ git init
 $ git add .
 $ git commit -m "Initial commit"
 $ heroku create
-$ heroku config:set FOO=1 BAR=2 BAZ=3
 $ git push heroku master
 $ heroku scale bot=1
 ```
