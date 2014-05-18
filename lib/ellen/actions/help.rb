@@ -12,7 +12,7 @@ module Ellen
       end
 
       def action_descriptions
-        Ellen.actions.map do |action|
+        Ellen.actions.reject(&:hidden?).map do |action|
           prefix = ""
           prefix << message.robot.name << " " unless  action.all?
           "%-#{pattern_max_length + prefix.size}s - #{action.description}" % "#{prefix}#{action.pattern.inspect}"

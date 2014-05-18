@@ -23,6 +23,10 @@ module Ellen
       options[:description] || "(no description)"
     end
 
+    def hidden?
+      !!options[:hidden]
+    end
+
     def name
       options[:name]
     end
