@@ -1,3 +1,6 @@
+## 0.2.4
+* Reveal message prefix pattern as a class method
+
 ## 0.2.3
 * Help message is formatted if adapter supported
 
