@@ -1,3 +1,7 @@
+## 0.2.6
+* Add `who am i?` handler
+* Sort commands in help message
+
 ## 0.2.5
 * Hide action defined with `:hidden` option in Help message
 
