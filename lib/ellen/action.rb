@@ -31,6 +31,10 @@ module Ellen
       options[:name]
     end
 
+    def <=>(action)
+      pattern.to_s <=> action.pattern.to_s
+    end
+
     private
 
     def pattern_with(robot_name)
