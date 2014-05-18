@@ -1,3 +1,6 @@
+## 0.2.5
+* Hide action defined with `:hidden` option in Help message
+
 ## 0.2.4
 * Reveal message prefix pattern as a class method
 
