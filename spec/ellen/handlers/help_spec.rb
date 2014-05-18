@@ -18,6 +18,7 @@ describe Ellen::Handlers::Help do
       <<-EOS.strip_heredoc.strip
         ellen /help( me)?\\z/i - Show this help message
         ellen /ping\\z/i       - Return PONG to PING
+        ellen /who am i\\?/i   - Answer who you are
       EOS
     end
 
