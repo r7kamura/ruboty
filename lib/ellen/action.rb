@@ -1,5 +1,9 @@
 module Ellen
   class Action
+    def self.prefix_pattern(robot_name)
+      /\A@?#{Regexp.escape(robot_name)}:?\s*/
+    end
+
     attr_reader :options, :pattern
 
     def initialize(pattern, options = {})
@@ -25,11 +29,11 @@ module Ellen
 
     private
 
-    def pattern_with(name)
+    def pattern_with(robot_name)
       if all?
         /\A#{pattern}/
       else
-        /\A@?#{Regexp.escape(name)}:?\s*#{pattern}/
+        /#{self.class.prefix_pattern(robot_name)}#{pattern}/
       end
     end
   end
