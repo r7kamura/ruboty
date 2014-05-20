@@ -1,3 +1,6 @@
+## 0.2.8
+* Use Ellen::Message#from_name in whoami action
+
 ## 0.2.7
 * Add Ellen::Message#from_name for rich chat service
 
