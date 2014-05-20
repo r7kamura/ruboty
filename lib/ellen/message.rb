@@ -17,6 +17,12 @@ module Ellen
       @original[:from]
     end
 
+    # @note Some chat service such as XMPP has 2 types of address, address and username
+    # @return [String] User identifier in the Chat service
+    def from_name
+      @original[:from_name] || from
+    end
+
     def robot
       @original[:robot]
     end
