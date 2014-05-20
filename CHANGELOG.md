@@ -1,3 +1,6 @@
+## 0.2.7
+* Add Ellen::Message#from_name for rich chat service
+
 ## 0.2.6
 * Add `who am i?` handler
 * Sort commands in help message
