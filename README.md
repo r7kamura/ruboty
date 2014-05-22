@@ -23,6 +23,7 @@ Brain persists your robot's memory.
 ## Handler
 Handler provides various behaviors to your robot.
 
+* [Ellen::Handlers::Alias](https://github.com/r7kamura/ellen-alias)
 * [Ellen::Handlers::Cron](https://github.com/r7kamura/ellen-cron)
 * [Ellen::Handlers::Github](https://github.com/r7kamura/ellen-github)
 * [Ellen::Handlers::GoogleImage](https://github.com/r7kamura/ellen-google_image)
