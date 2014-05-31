@@ -1,6 +1,6 @@
 module Ruboty
   class Robot
-    DEFAULT_ROBOT_NAME = "ellen"
+    DEFAULT_ROBOT_NAME = "ruboty"
 
     include Mem
 

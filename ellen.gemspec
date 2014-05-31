@@ -1,14 +1,14 @@
 lib = File.expand_path("../lib", __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require "ellen/version"
+require "ruboty/version"
 
 Gem::Specification.new do |spec|
-  spec.name          = "ellen"
+  spec.name          = "ruboty"
   spec.version       = Ruboty::VERSION
   spec.authors       = ["Ryo Nakamura"]
   spec.email         = ["r7kamura@gmail.com"]
   spec.summary       = "A chatterbot framework, inspired by Hubot"
-  spec.homepage      = "https://github.com/r7kamura/ellen"
+  spec.homepage      = "https://github.com/r7kamura/ruboty"
   spec.license       = "MIT"
 
   spec.files         = `git ls-files -z`.split("\x0")

@@ -15,7 +15,7 @@ describe Ruboty::Handlers::Ping do
     end
 
     let(:said) do
-      "@ellen ping"
+      "@ruboty ping"
     end
 
     let(:replied) do

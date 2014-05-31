@@ -3,7 +3,7 @@ require "spec_helper"
 describe Ruboty::Commands::Generate do
   describe "#call" do
     after do
-      FileUtils.rmtree("./ellen/")
+      FileUtils.rmtree("./ruboty/")
     end
 
     let(:command) do
@@ -19,19 +19,19 @@ describe Ruboty::Commands::Generate do
     end
 
     context "with normal condition" do
-      it "generates ./ellen/ directory from our templates" do
+      it "generates ./ruboty/ directory from our templates" do
         call
-        File.exists?("./ellen/").should == true
+        File.exists?("./ruboty/").should == true
       end
     end
 
-    context "when ./ellen/ directory already exists" do
+    context "when ./ruboty/ directory already exists" do
       before do
-        FileUtils.mkdir("./ellen/")
+        FileUtils.mkdir("./ruboty/")
       end
 
       it "exits process with dying message" do
-        Ruboty.logger.should_receive(:error).with("Error: ./ellen/ already exists.")
+        Ruboty.logger.should_receive(:error).with("Error: ./ruboty/ already exists.")
         expect { call }.to raise_error(SystemExit)
       end
     end

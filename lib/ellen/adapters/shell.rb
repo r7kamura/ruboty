@@ -69,7 +69,7 @@ module Ruboty
       end
 
       def history_pathname
-        @history_pathname ||= Pathname.new("~/.ellen_history").expand_path
+        @history_pathname ||= Pathname.new("~/.ruboty_history").expand_path
       end
 
       def history_file

@@ -22,7 +22,7 @@ module Ruboty
       end
 
       def destination_path
-        "./ellen/"
+        "./ruboty/"
       end
 
       def valid?

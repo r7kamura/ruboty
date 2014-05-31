@@ -1,6 +1,6 @@
 #!/usr/bin/env ruby
 
 $LOAD_PATH.unshift File.expand_path("../../lib", __FILE__)
-require "ellen"
+require "ruboty"
 
 Ruboty::CommandBuilder.new(ARGV).build.call

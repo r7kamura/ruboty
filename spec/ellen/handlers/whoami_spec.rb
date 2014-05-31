@@ -15,7 +15,7 @@ describe Ruboty::Handlers::Whoami do
     end
 
     let(:said) do
-      "@ellen Who am I?"
+      "@ruboty Who am I?"
     end
 
     it "returns PONG to PING" do

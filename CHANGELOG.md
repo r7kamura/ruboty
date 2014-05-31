@@ -21,7 +21,7 @@
 * Now `Ruboty::Robot#say(message)` can use `message[:original]`
 
 ## 0.2.1
-* Store shell history in ~/.ellen_history
+* Store shell history in ~/.ruboty_history
 
 ## 0.2.0
 * Change adapter & message interface
@@ -49,11 +49,11 @@
 * Add PING handler
 
 ## 0.0.6
-* `ellen help` to show actions list
+* `ruboty help` to show actions list
 
 ## 0.0.5
 * Now Action can access to MatchData object via Message
-* ENV["ROBOT_NAME"] or "ellen" is default name
+* ENV["ROBOT_NAME"] or "ruboty" is default name
 * Robot only responds to mention unless :all option specified
 
 ## 0.0.4
