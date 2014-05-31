@@ -1,6 +1,6 @@
 require "logger"
 
-module Ellen
+module Ruboty
   class Logger < Logger
     def initialize(*)
       super

@@ -1,12 +1,12 @@
 # Abstract class to be inherited from adapter class.
-module Ellen
+module Ruboty
   module Adapters
     class Base
       include Env::Validatable
 
       class << self
         def inherited(child_class)
-          Ellen::AdapterBuilder.adapter_classes << child_class
+          Ruboty::AdapterBuilder.adapter_classes << child_class
         end
       end
 

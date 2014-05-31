@@ -1,4 +1,4 @@
-module Ellen
+module Ruboty
   class AdapterBuilder
     def self.adapter_classes
       @adapter_classes ||= []

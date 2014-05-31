@@ -1,4 +1,4 @@
-module Ellen
+module Ruboty
   module Handlers
     class Whoami < Base
       on(
@@ -8,7 +8,7 @@ module Ellen
       )
 
       def whoami(message)
-        Ellen::Actions::Whoami.new(message).call
+        Ruboty::Actions::Whoami.new(message).call
       end
     end
   end

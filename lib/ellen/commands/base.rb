@@ -1,4 +1,4 @@
-module Ellen
+module Ruboty
   module Commands
     class Base
       attr_reader :options

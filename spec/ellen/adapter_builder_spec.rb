@@ -1,28 +1,28 @@
 require "spec_helper"
 
-describe Ellen::AdapterBuilder do
+describe Ruboty::AdapterBuilder do
   let(:builder) do
     described_class.new(robot)
   end
 
   let(:robot) do
-    Ellen::Robot.new
+    Ruboty::Robot.new
   end
 
   describe "#build" do
     context "with no other adapter class definition" do
-      it "returns a Ellen::Adapters::Shell as a default adapter" do
-        builder.build.should be_a Ellen::Adapters::Shell
+      it "returns a Ruboty::Adapters::Shell as a default adapter" do
+        builder.build.should be_a Ruboty::Adapters::Shell
       end
     end
 
     context "with another adapter class definition" do
       after do
-        Ellen::AdapterBuilder.adapter_classes.pop
+        Ruboty::AdapterBuilder.adapter_classes.pop
       end
 
       let!(:another_adapter_class) do
-        Class.new(Ellen::Adapters::Base) do
+        Class.new(Ruboty::Adapters::Base) do
           def run
           end
         end

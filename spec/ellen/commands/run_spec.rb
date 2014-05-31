@@ -1,9 +1,9 @@
 require "spec_helper"
 
-describe Ellen::Commands::Run do
+describe Ruboty::Commands::Run do
   describe "#call" do
     let(:command) do
-      Ellen::CommandBuilder.new(arguments).build
+      Ruboty::CommandBuilder.new(arguments).build
     end
 
     let(:call) do
@@ -15,7 +15,7 @@ describe Ellen::Commands::Run do
     end
 
     it "creates an adapter and calls .run to it" do
-      Ellen::Adapters::Shell.any_instance.should_receive(:run)
+      Ruboty::Adapters::Shell.any_instance.should_receive(:run)
       call
     end
   end

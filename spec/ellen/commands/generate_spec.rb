@@ -1,13 +1,13 @@
 require "spec_helper"
 
-describe Ellen::Commands::Generate do
+describe Ruboty::Commands::Generate do
   describe "#call" do
     after do
       FileUtils.rmtree("./ellen/")
     end
 
     let(:command) do
-      Ellen::CommandBuilder.new(arguments).build
+      Ruboty::CommandBuilder.new(arguments).build
     end
 
     let(:call) do
@@ -31,7 +31,7 @@ describe Ellen::Commands::Generate do
       end
 
       it "exits process with dying message" do
-        Ellen.logger.should_receive(:error).with("Error: ./ellen/ already exists.")
+        Ruboty.logger.should_receive(:error).with("Error: ./ellen/ already exists.")
         expect { call }.to raise_error(SystemExit)
       end
     end

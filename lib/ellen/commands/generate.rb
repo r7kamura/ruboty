@@ -1,6 +1,6 @@
 require "fileutils"
 
-module Ellen
+module Ruboty
   module Commands
     class Generate < Base
       def call
@@ -14,7 +14,7 @@ module Ellen
       end
 
       def die
-        Ellen.die("#{destination_path} already exists.")
+        Ruboty.die("#{destination_path} already exists.")
       end
 
       def templates_directory_path

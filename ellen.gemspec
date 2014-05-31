@@ -4,7 +4,7 @@ require "ellen/version"
 
 Gem::Specification.new do |spec|
   spec.name          = "ellen"
-  spec.version       = Ellen::VERSION
+  spec.version       = Ruboty::VERSION
   spec.authors       = ["Ryo Nakamura"]
   spec.email         = ["r7kamura@gmail.com"]
   spec.summary       = "A chatterbot framework, inspired by Hubot"

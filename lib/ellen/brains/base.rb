@@ -1,4 +1,4 @@
-module Ellen
+module Ruboty
   module Brains
     class Base
       include Env::Validatable

@@ -1,4 +1,4 @@
-module Ellen
+module Ruboty
   module Actions
     class Help < Base
       def call
@@ -12,7 +12,7 @@ module Ellen
       end
 
       def action_descriptions
-        Ellen.actions.reject(&:hidden?).sort.map do |action|
+        Ruboty.actions.reject(&:hidden?).sort.map do |action|
           prefix = ""
           prefix << message.robot.name << " " unless  action.all?
           "%-#{pattern_max_length + prefix.size}s - #{action.description}" % "#{prefix}#{action.pattern.inspect}"
@@ -20,7 +20,7 @@ module Ellen
       end
 
       def pattern_max_length
-        Ellen.actions.map {|action| action.pattern.inspect }.map(&:size).max
+        Ruboty.actions.map {|action| action.pattern.inspect }.map(&:size).max
       end
     end
   end

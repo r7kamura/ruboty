@@ -6,12 +6,12 @@ require "dotenv"
 require "mem"
 require "slop"
 
-module Ellen
+module Ruboty
   class << self
     include Mem
 
     def logger
-      @logger ||= Ellen::Logger.new($stdout)
+      @logger ||= Ruboty::Logger.new($stdout)
     end
 
     def die(message)

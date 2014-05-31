@@ -1,4 +1,4 @@
-module Ellen
+module Ruboty
   module Actions
     class Ping < Base
       def call

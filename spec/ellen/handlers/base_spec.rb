@@ -1,12 +1,12 @@
 require "spec_helper"
 
-describe Ellen::Handlers::Base do
+describe Ruboty::Handlers::Base do
   after do
-    Ellen.handlers.pop
+    Ruboty.handlers.pop
   end
 
   let(:robot) do
-    Ellen::Robot.new
+    Ruboty::Robot.new
   end
 
   let!(:handler_class) do

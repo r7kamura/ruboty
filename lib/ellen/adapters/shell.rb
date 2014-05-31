@@ -1,6 +1,6 @@
 require "readline"
 
-module Ellen
+module Ruboty
   module Adapters
     class Shell < Base
       PROMPT = "> "
@@ -22,13 +22,13 @@ module Ellen
       end
 
       def say(message)
-        Ellen.logger.info(message[:body])
+        Ruboty.logger.info(message[:body])
       end
 
       private
 
       def explain
-        Ellen.logger.info(USAGE)
+        Ruboty.logger.info(USAGE)
       end
 
       def read

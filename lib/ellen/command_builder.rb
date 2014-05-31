@@ -1,4 +1,4 @@
-module Ellen
+module Ruboty
   class CommandBuilder
     include Mem
 

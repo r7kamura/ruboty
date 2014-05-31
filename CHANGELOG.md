@@ -1,8 +1,8 @@
 ## 0.2.8
-* Use Ellen::Message#from_name in whoami action
+* Use Ruboty::Message#from_name in whoami action
 
 ## 0.2.7
-* Add Ellen::Message#from_name for rich chat service
+* Add Ruboty::Message#from_name for rich chat service
 
 ## 0.2.6
 * Add `who am i?` handler
@@ -18,7 +18,7 @@
 * Help message is formatted if adapter supported
 
 ## 0.2.2
-* Now `Ellen::Robot#say(message)` can use `message[:original]`
+* Now `Ruboty::Robot#say(message)` can use `message[:original]`
 
 ## 0.2.1
 * Store shell history in ~/.ellen_history
@@ -27,7 +27,7 @@
 * Change adapter & message interface
 
 ## 0.1.3
-* Change Ellen::Message interface
+* Change Ruboty::Message interface
 
 ## 0.1.2
 * Make Handler validatable

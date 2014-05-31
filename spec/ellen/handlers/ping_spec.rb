@@ -1,8 +1,8 @@
 require "spec_helper"
 
-describe Ellen::Handlers::Ping do
+describe Ruboty::Handlers::Ping do
   let(:robot) do
-    Ellen::Robot.new
+    Ruboty::Robot.new
   end
 
   describe "#ping" do

@@ -1,4 +1,4 @@
-module Ellen
+module Ruboty
   class Env
     class MissingRequiredKeyError < StandardError
     end

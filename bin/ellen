@@ -3,4 +3,4 @@
 $LOAD_PATH.unshift File.expand_path("../../lib", __FILE__)
 require "ellen"
 
-Ellen::CommandBuilder.new(ARGV).build.call
+Ruboty::CommandBuilder.new(ARGV).build.call

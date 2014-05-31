@@ -1,4 +1,4 @@
-module Ellen
+module Ruboty
   module Brains
     class Memory < Base
       def data

@@ -1,4 +1,4 @@
-module Ellen
+module Ruboty
   class Robot
     DEFAULT_ROBOT_NAME = "ellen"
 
@@ -61,7 +61,7 @@ module Ellen
     end
 
     def handlers
-      Ellen.handlers.map {|handler_class| handler_class.new(self) }
+      Ruboty.handlers.map {|handler_class| handler_class.new(self) }
     end
     memoize :handlers
 

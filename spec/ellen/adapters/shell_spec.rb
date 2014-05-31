@@ -1,8 +1,8 @@
 require "spec_helper"
 
-describe Ellen::Adapters::Shell do
+describe Ruboty::Adapters::Shell do
   before do
-    Ellen.logger.stub(:info)
+    Ruboty.logger.stub(:info)
   end
 
   let(:adapter) do
@@ -10,7 +10,7 @@ describe Ellen::Adapters::Shell do
   end
 
   let(:robot) do
-    Ellen::Robot.new
+    Ruboty::Robot.new
   end
 
   describe "#run" do
@@ -49,7 +49,7 @@ describe Ellen::Adapters::Shell do
 
   describe "#say" do
     it "shows given message body on stdout" do
-      Ellen.logger.should_receive(:info).with("a")
+      Ruboty.logger.should_receive(:info).with("a")
       adapter.say(body: "a")
     end
   end

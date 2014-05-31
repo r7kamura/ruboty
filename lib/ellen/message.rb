@@ -1,4 +1,4 @@
-module Ellen
+module Ruboty
   class Message
     attr_reader(
       :match_data,

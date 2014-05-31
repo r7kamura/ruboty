@@ -1,11 +1,11 @@
-module Ellen
+module Ruboty
   module Handlers
     class Base
       class << self
         include Mem
 
         def inherited(child)
-          Ellen.handlers << child
+          Ruboty.handlers << child
         end
 
         def on(pattern, options = {})

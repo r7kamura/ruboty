@@ -1,4 +1,4 @@
-module Ellen
+module Ruboty
   module Actions
     class Base
       attr_reader :message

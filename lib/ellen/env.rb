@@ -1,4 +1,4 @@
-module Ellen
+module Ruboty
   class Env
     attr_reader :key, :description, :options
 

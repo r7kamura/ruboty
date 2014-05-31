@@ -1,6 +1,6 @@
 require "spec_helper"
 
-describe Ellen::Robot do
+describe Ruboty::Robot do
   let(:instance) do
     described_class.new(options)
   end
@@ -11,8 +11,8 @@ describe Ellen::Robot do
 
   describe "#brain" do
     context "without any Brain class" do
-      it "returns a Ellen::Brains::Memory" do
-        instance.brain.should be_a Ellen::Brains::Memory
+      it "returns a Ruboty::Brains::Memory" do
+        instance.brain.should be_a Ruboty::Brains::Memory
       end
 
       it "can be used as a Hash object" do
@@ -23,11 +23,11 @@ describe Ellen::Robot do
 
     context "with another Brain class" do
       after do
-        Ellen::Brains::Base.brain_classes.pop
+        Ruboty::Brains::Base.brain_classes.pop
       end
 
       let!(:another_brain_class) do
-        Class.new(Ellen::Brains::Base)
+        Class.new(Ruboty::Brains::Base)
       end
 
       it "returns its instance as a Brain" do

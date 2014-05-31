@@ -1,4 +1,4 @@
-module Ellen
+module Ruboty
   class Env
     module Validatable
       extend ActiveSupport::Concern
@@ -26,7 +26,7 @@ module Ellen
       def validate!
         validate
       rescue ValidationError => exception
-        Ellen.die(exception)
+        Ruboty.die(exception)
       end
     end
   end
