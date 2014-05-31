@@ -1,3 +1,6 @@
+## 1.0.0
+* Rename: Ellen -> Ruboty
+
 ## 0.2.8
 * Use Ruboty::Message#from_name in whoami action
 
