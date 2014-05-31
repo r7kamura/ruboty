@@ -7,7 +7,7 @@ Gem::Specification.new do |spec|
   spec.version       = Ruboty::VERSION
   spec.authors       = ["Ryo Nakamura"]
   spec.email         = ["r7kamura@gmail.com"]
-  spec.summary       = "A chatterbot framework, inspired by Hubot"
+  spec.summary       = "Ruby + Bot = Ruboty"
   spec.homepage      = "https://github.com/r7kamura/ruboty"
   spec.license       = "MIT"
 

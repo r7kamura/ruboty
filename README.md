@@ -1,6 +1,6 @@
 # Ruboty [![Build Status](https://travis-ci.org/r7kamura/ruboty.png)](https://travis-ci.org/r7kamura/ruboty) [![Code Climate](https://codeclimate.com/github/r7kamura/ruboty.png)](https://codeclimate.com/github/r7kamura/ruboty) [![Code Climate](https://codeclimate.com/github/r7kamura/ruboty/coverage.png)](https://codeclimate.com/github/r7kamura/ruboty)
 
-A chatterbot framework, inspired by Hubot.
+Ruby + Bot = Ruboty.
 
 ## Dependencies
 * Ruby 1.9.3+
