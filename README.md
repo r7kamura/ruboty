@@ -8,28 +8,23 @@ Ruby + Bot = Ruboty.
 ## Adapter
 Adapter hooks up your robot to chat services.
 
-* [Ruboty::Adapters::Hipchat](https://github.com/r7kamura/ruboty-hipchat)
-* [Ruboty::Adapters::Idobata](https://github.com/hanachin/ruboty-idobata)
-* [Ruboty::Adapters::Shell](https://github.com/r7kamura/ruboty/blob/master/lib/ruboty/adapters/shell.rb)
-* [Ruboty::Adapters::Slack](https://github.com/r7kamura/ruboty-slack)
-* [Ruboty::Adapters::Twitter](https://github.com/r7kamura/ruboty-twitter)
+* [ruboty-hipchat](https://github.com/r7kamura/ruboty-hipchat)
+* [ruboty-slack](https://github.com/r7kamura/ruboty-slack)
+* [ruboty-twitter](https://github.com/r7kamura/ruboty-twitter)
 
 ## Brain
 Brain persists your robot's memory.
 
-* [Ruboty::Brains::Memory](https://github.com/r7kamura/ruboty/blob/master/lib/ruboty/brains/memory.rb)
-* [Ruboty::Brains::Redis](https://github.com/r7kamura/ruboty-redis)
+* [ruboty-redis](https://github.com/r7kamura/ruboty-redis)
 
 ## Handler
 Handler provides various behaviors to your robot.
 
-* [Ruboty::Handlers::Alias](https://github.com/r7kamura/ruboty-alias)
-* [Ruboty::Handlers::Cron](https://github.com/r7kamura/ruboty-cron)
-* [Ruboty::Handlers::Github](https://github.com/r7kamura/ruboty-github)
-* [Ruboty::Handlers::GoogleImage](https://github.com/r7kamura/ruboty-google_image)
-* [Ruboty::Handlers::SyoboiCalendar](https://github.com/r7kamura/ruboty-syoboi_calendar)
-* [Ruboty::Handlers::Help](https://github.com/r7kamura/ruboty/blob/master/lib/ruboty/handlers/help.rb)
-* [Ruboty::Handlers::Ping](https://github.com/r7kamura/ruboty/blob/master/lib/ruboty/handlers/ping.rb)
+* [ruboty-alias](https://github.com/r7kamura/ruboty-alias)
+* [ruboty-cron](https://github.com/r7kamura/ruboty-cron)
+* [ruboty-github](https://github.com/r7kamura/ruboty-github)
+* [ruboty-google_image](https://github.com/r7kamura/ruboty-google_image)
+* [ruboty-syoboi_calendar](https://github.com/r7kamura/ruboty-syoboi_calendar)
 
 ## Configuration
 Store configuration value in envorinment variables.
