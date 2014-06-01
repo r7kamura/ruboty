@@ -1,3 +1,6 @@
+## 1.0.1
+* Ignore if no Gemfile found in current directory or given path
+
 ## 1.0.0
 * Rename: Ellen -> Ruboty
 

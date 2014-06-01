@@ -50,6 +50,7 @@ module Ruboty
 
     def bundle
       Bundler.require
+    rescue Bundler::GemfileNotFound
     end
 
     def dotenv
