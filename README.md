@@ -46,7 +46,7 @@ gem "ruboty-slack"
 Here is the smallest example to deploy a simple chatterbot to Heroku.
 
 ```sh
-$ echo 'source "https://rubygesm.org"' >> Gemfile
+$ echo 'source "https://rubygems.org"' >> Gemfile
 $ echo 'gem "ruboty"' >> Gemfile
 $ echo 'bot: bundle exec ruboty' >> Procfile
 $ bundle install
