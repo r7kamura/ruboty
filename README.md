@@ -9,6 +9,7 @@ Ruby + Bot = Ruboty.
 Adapter hooks up your robot to chat services.
 
 * [ruboty-hipchat](https://github.com/r7kamura/ruboty-hipchat)
+* [ruboty-idobata](https://github.com/hanachin/ruboty-idobata)
 * [ruboty-slack](https://github.com/r7kamura/ruboty-slack)
 * [ruboty-twitter](https://github.com/r7kamura/ruboty-twitter)
 
