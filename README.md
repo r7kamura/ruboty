@@ -25,6 +25,7 @@ Handler provides various behaviors to your robot.
 * [ruboty-cron](https://github.com/r7kamura/ruboty-cron)
 * [ruboty-github](https://github.com/r7kamura/ruboty-github)
 * [ruboty-google_image](https://github.com/r7kamura/ruboty-google_image)
+* [ruboty-lgtm](https://github.com/negipo/ruboty-lgtm)
 * [ruboty-syoboi_calendar](https://github.com/r7kamura/ruboty-syoboi_calendar)
 
 ## Configuration
