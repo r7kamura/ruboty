@@ -9,10 +9,16 @@ require "slop"
 module Ruboty
   class << self
     include Mem
+    DEFAULT_ENVIRONMENT = "development"
 
     def logger
       @logger ||= Ruboty::Logger.new($stdout)
     end
+
+    def env
+      ENV["RUBOTY_ENV"] || DEFAULT_ENVIRONMENT
+    end
+    memoize :env
 
     def die(message)
       logger.error("Error: #{message}")

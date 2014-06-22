@@ -44,6 +44,29 @@ gem "ruboty-redis"
 gem "ruboty-slack"
 ```
 
+## Environment
+Ruboty has global environment configuration like `Rails.env`.
+You can specify Ruboty environment via environment variables:
+
+```shell
+RUBOTY_ENV=production bundle exec ruboty
+```
+
+Ruboty only loads dependent gems group by current environment.
+
+```ruby
+# Gemfile
+group :development do
+  gem "ruboty" # For development shell console
+end
+
+group :production do
+  gem "ruboty-slack" # For production adapter
+end
+```
+
+The default Ruboty environment is `development`.
+
 ## Deploy
 Here is the smallest example to deploy a simple chatterbot to Heroku.
 
