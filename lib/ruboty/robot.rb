@@ -49,7 +49,7 @@ module Ruboty
     memoize :adapter
 
     def bundle
-      Bundler.require
+      Bundler.require(:default, Ruboty.env)
     rescue Bundler::GemfileNotFound
     end
 
