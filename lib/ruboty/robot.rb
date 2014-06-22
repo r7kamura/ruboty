@@ -1,6 +1,6 @@
 module Ruboty
   class Robot
-    DEFAULT_ENVIRONMENT = "development"
+    DEFAULT_ENV = "development"
     DEFAULT_ROBOT_NAME = "ruboty"
 
     include Mem
@@ -55,7 +55,7 @@ module Ruboty
     end
 
     def env
-      ENV["RUBOTY_ENV"] || DEFAULT_ENVIRONMENT
+      ENV["RUBOTY_ENV"] || DEFAULT_ENV
     end
     memoize :env
 
