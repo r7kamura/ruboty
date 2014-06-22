@@ -1,5 +1,6 @@
 module Ruboty
   class Robot
+    DEFAULT_ENVIRONMENT = "development"
     DEFAULT_ROBOT_NAME = "ruboty"
 
     include Mem
@@ -49,9 +50,14 @@ module Ruboty
     memoize :adapter
 
     def bundle
-      Bundler.require(:default, Ruboty.env)
+      Bundler.require(:default, env)
     rescue Bundler::GemfileNotFound
     end
+
+    def env
+      ENV["RUBOTY_ENV"] || DEFAULT_ENVIRONMENT
+    end
+    memoize :env
 
     def dotenv
       Dotenv.load if options[:dotenv]
