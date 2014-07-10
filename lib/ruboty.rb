@@ -25,7 +25,7 @@ module Ruboty
     memoize :handlers
 
     def actions
-      handlers.map(&:actions).flatten.sort_by(&:all?)
+      handlers.map(&:actions).flatten.sort_by { |action| action.all? ? 1 : 0 }
     end
   end
 end
