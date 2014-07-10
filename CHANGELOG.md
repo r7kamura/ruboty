@@ -1,3 +1,6 @@
+## 1.0.3
+* Fix help handler
+
 ## 1.0.2
 * Add RUBOTY_ENV to change bundled gems with environment
 
