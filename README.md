@@ -82,6 +82,3 @@ $ heroku create
 $ git push heroku master
 $ heroku scale bot=1
 ```
-
-## Screenshot
-![](https://raw.githubusercontent.com/r7kamura/ruboty/master/images/screenshot.png)
