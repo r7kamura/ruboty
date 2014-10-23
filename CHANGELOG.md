@@ -1,3 +1,6 @@
+## 1.0.4
+* Support RUBOTY_NAME and obsolete ROBOT_NAME
+
 ## 1.0.3
 * Fix help handler
 
