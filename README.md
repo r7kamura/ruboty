@@ -69,3 +69,5 @@ end
 
 ## Deploy
 See [r7kamura/ruboty-template](https://github.com/r7kamura/ruboty-template) for example.
+
+[![Deploy](https://www.herokucdn.com/deploy/button.png)](https://heroku.com/deploy?template=https://github.com/r7kamura/ruboty-template)
