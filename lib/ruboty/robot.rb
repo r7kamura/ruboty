@@ -29,8 +29,9 @@ module Ruboty
       end
     end
 
+    # ROBOT_NAME is deprecated.
     def name
-      ENV["ROBOT_NAME"] || DEFAULT_ROBOT_NAME
+      ENV["RUBOTY_NAME"] || ENV["ROBOT_NAME"] || DEFAULT_ROBOT_NAME
     end
 
     def brain
