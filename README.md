@@ -68,17 +68,4 @@ end
 ```
 
 ## Deploy
-Here is the smallest example to deploy a simple chatterbot to Heroku.
-
-```sh
-$ echo 'source "https://rubygems.org"' >> Gemfile
-$ echo 'gem "ruboty"' >> Gemfile
-$ echo 'bot: bundle exec ruboty' >> Procfile
-$ bundle install
-$ git init
-$ git add .
-$ git commit -m "Initial commit"
-$ heroku create
-$ git push heroku master
-$ heroku scale bot=1
-```
+See [r7kamura/ruboty-template](https://github.com/r7kamura/ruboty-template) for example.
