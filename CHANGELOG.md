@@ -1,3 +1,6 @@
+## 1.1.2
+* Fix message matching pattern so that "rubotyping" is not responded
+
 ## 1.1.1
 * Use action's returned-value to check if :missing action is invoked or not
 
