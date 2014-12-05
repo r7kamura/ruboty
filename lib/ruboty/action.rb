@@ -1,7 +1,7 @@
 module Ruboty
   class Action
     def self.prefix_pattern(robot_name)
-      /\A@?#{Regexp.escape(robot_name)}:?\s*/
+      /\A@?#{Regexp.escape(robot_name)}:?\s+/
     end
 
     attr_reader :options, :pattern
