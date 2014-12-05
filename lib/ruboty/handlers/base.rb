@@ -27,9 +27,9 @@ module Ruboty
         validate!
       end
 
-      def call(message)
-        self.class.actions.each do |action|
-          action.call(self, message)
+      def call(message, options = {})
+        self.class.actions.inject(false) do |matched, action|
+          matched | action.call(self, message, options)
         end
       end
     end

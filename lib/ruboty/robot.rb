@@ -24,8 +24,10 @@ module Ruboty
 
     def receive(attributes)
       message = Message.new(attributes.merge(robot: self))
-      handlers.each do |handler|
-        handler.call(message)
+      unless handlers.inject(false) { |matched, handler| matched | handler.call(message) }
+        handlers.each do |handler|
+          handler.call(message, missing: true)
+        end
       end
     end
 

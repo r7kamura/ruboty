@@ -11,8 +11,13 @@ module Ruboty
       @options = options
     end
 
-    def call(handler, message)
-      handler.send(name, message) if message.match pattern_with(handler.robot.name)
+    def call(handler, message, options = {})
+      if !!options[:missing] == missing? && message.match(pattern_with(handler.robot.name))
+        handler.send(name, message)
+        true
+      else
+        false
+      end
     end
 
     def all?
@@ -25,6 +30,11 @@ module Ruboty
 
     def hidden?
       !!options[:hidden]
+    end
+
+    # @note :missing action is called only when any handler doesn't match given message.
+    def missing?
+      !!options[:missing]
     end
 
     def name
