@@ -1,3 +1,6 @@
+## 1.1.0
+* Add :missing option for handler to respond with messages that didn't match any handlers
+
 ## 1.0.4
 * Support RUBOTY_NAME and obsolete ROBOT_NAME
 
