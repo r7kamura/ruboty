@@ -13,8 +13,7 @@ module Ruboty
 
     def call(handler, message, options = {})
       if !!options[:missing] == missing? && message.match(pattern_with(handler.robot.name))
-        handler.send(name, message)
-        true
+        !!handler.send(name, message)
       else
         false
       end

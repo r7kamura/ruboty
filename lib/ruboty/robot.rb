@@ -31,6 +31,12 @@ module Ruboty
       end
     end
 
+    # @return [true] Because it needs to tell that an action is matched.
+    def say(*args)
+      adapter.say(*args)
+      true
+    end
+
     # ROBOT_NAME is deprecated.
     def name
       ENV["RUBOTY_NAME"] || ENV["ROBOT_NAME"] || DEFAULT_ROBOT_NAME
