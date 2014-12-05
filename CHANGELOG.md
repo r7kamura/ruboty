@@ -1,3 +1,6 @@
+## 1.1.1
+* Use action's returned-value to check if :missing action is invoked or not
+
 ## 1.1.0
 * Add :missing option for handler to respond with messages that didn't match any handlers
 
