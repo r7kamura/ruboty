@@ -23,11 +23,13 @@ Handler provides various behaviors to your robot.
 
 * [ruboty-alias](https://github.com/r7kamura/ruboty-alias)
 * [ruboty-cron](https://github.com/r7kamura/ruboty-cron)
+* [ruboty-echo](https://github.com/taiki45/ruboty-echo)
 * [ruboty-github](https://github.com/r7kamura/ruboty-github)
 * [ruboty-google_image](https://github.com/r7kamura/ruboty-google_image)
 * [ruboty-japan_weather](https://github.com/taiki45/ruboty-japan_weather)
 * [ruboty-lgtm](https://github.com/negipo/ruboty-lgtm)
 * [ruboty-syoboi_calendar](https://github.com/r7kamura/ruboty-syoboi_calendar)
+* [ruboty-talk](https://github.com/r7kamura/ruboty-talk)
 
 ## Configuration
 Store configuration value in envorinment variables.
