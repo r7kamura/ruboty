@@ -1,3 +1,6 @@
+## 1.1.4
+- Support slop version 4
+
 ## 1.1.3
 - Fix slop version (thx @parroty)
 
