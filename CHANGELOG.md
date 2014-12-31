@@ -1,3 +1,6 @@
+## 1.1.3
+- Fix slop version (thx @parroty)
+
 ## 1.1.2
 - Fix message matching pattern so that "rubotyping" is not responded
 
