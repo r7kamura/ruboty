@@ -15,15 +15,23 @@ module Ruboty
     private
 
     def command_class
-      options[:generate] ? Commands::Generate : Commands::Run
+      case
+      when options[:generate]
+        Commands::Generate
+      when options[:help]
+        Commands::Help
+      else
+        Commands::Run
+      end
     end
 
     def options
-      Slop.parse!(arguments, help: true) do
-        on("dotenv", "Load .env before running.")
-        on("g", "generate", "Generate a new chatterbot with ./ruboty/ directory if specified.")
-        on("l", "load=", "Load a ruby file before running.")
-      end.to_hash
+      Slop.parse(arguments) do |options|
+        options.on("--dotenv", "Load .env before running.")
+        options.on("-g", "--generate", "Generate a new chatterbot with ./ruboty/ directory if specified.")
+        options.on("-h", "--help", "Display this help message.")
+        options.on("-l", "--load=", "Load a ruby file before running.")
+      end
     end
     memoize :options
   end
