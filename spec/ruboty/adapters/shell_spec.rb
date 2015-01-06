@@ -24,7 +24,7 @@ describe Ruboty::Adapters::Shell do
 
     context "with `quit`" do
       it "stops" do
-        Readline.stub(readline: "exit")
+        Readline.stub(readline: "quit")
         adapter.should_receive(:stop).and_call_original
         adapter.run
       end
