@@ -26,7 +26,7 @@ module Ruboty
       end
 
       def valid?
-        !File.exists?(destination_path)
+        !File.exist?(destination_path)
       end
     end
   end
