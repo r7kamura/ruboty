@@ -32,6 +32,7 @@ module Ruboty
     end
 
     # @return [true] Because it needs to tell that an action is matched.
+    undef :say
     def say(*args)
       adapter.say(*args)
       true
@@ -77,7 +78,7 @@ module Ruboty
     end
 
     def handlers
-      Ruboty.handlers.map {|handler_class| handler_class.new(self) }
+      Ruboty.handlers.map { |handler_class| handler_class.new(self) }
     end
     memoize :handlers
 

@@ -21,7 +21,7 @@ describe Ruboty::Commands::Generate do
     context "with normal condition" do
       it "generates ./ruboty/ directory from our templates" do
         call
-        File.exists?("./ruboty/").should == true
+        File.exist?("./ruboty/").should == true
       end
     end
 
