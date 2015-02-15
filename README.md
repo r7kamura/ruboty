@@ -49,25 +49,10 @@ gem "ruboty-slack"
 ```
 
 ## Environment
-You can change loaded gems via `RUBOTY_ENV` (default: development).
-
-```sh
-RUBOTY_ENV=production bundle exec ruboty
 ```
-
-```ruby
-# Use ruboty-cron in any env
-gem "ruboty-cron"
-
-# Use HipChat in development env
-group :development do
-  gem "ruboty-hipchat"
-end
-
-# Use Slack in production env
-group :production do
-  gem "ruboty-slack"
-end
+LOG_LEVEL   - Log level for debug (default: 3)
+RUBOTY_NAME - Name to respond to mention (default: ruboty)
+RUBOTY_ENV  - Loaded gem group name (default: development)
 ```
 
 ## Deploy
