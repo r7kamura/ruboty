@@ -1,3 +1,6 @@
+## 1.1.7
+- Enable sync option of stdout to prevent buffering
+
 ## 1.1.6
 - Add LOG_LEVEL env
 
