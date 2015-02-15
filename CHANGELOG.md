@@ -1,3 +1,6 @@
+## 1.1.6
+- Add LOG_LEVEL env
+
 ## 1.1.5
 - Use slop version 4 or higher
 - Fix --load option (thx @amacou)
