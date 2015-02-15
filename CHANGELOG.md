@@ -1,3 +1,7 @@
+## 1.1.5
+- Use slop version 4 or higher
+- Fix --load option (thx @amacou)
+
 ## 1.1.4
 - Support slop version 4
 
