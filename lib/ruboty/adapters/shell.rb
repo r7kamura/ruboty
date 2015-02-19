@@ -22,7 +22,7 @@ module Ruboty
       end
 
       def say(message)
-        Ruboty.logger.info(message[:body])
+        puts message[:body]
       end
 
       private
