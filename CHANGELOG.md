@@ -1,3 +1,6 @@
+## 1.1.8
+- Fix shell adapter
+
 ## 1.1.7
 - Enable sync option of stdout to prevent buffering
 
