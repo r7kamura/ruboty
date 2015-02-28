@@ -16,6 +16,7 @@ Adapter hooks up your robot to chat services.
 ## Brain
 Brain persists your robot's memory.
 
+* [ruboty-leveldb](https://github.com/nownabe/ruboty-leveldb)
 * [ruboty-redis](https://github.com/r7kamura/ruboty-redis)
 
 ## Handler
@@ -31,6 +32,8 @@ Handler provides various behaviors to your robot.
 * [ruboty-lgtm](https://github.com/negipo/ruboty-lgtm)
 * [ruboty-syoboi_calendar](https://github.com/r7kamura/ruboty-syoboi_calendar)
 * [ruboty-talk](https://github.com/r7kamura/ruboty-talk)
+
+[Other plugins are hosted on Rubygems.](https://rubygems.org/search?utf8=%E2%9C%93&query=ruboty-)
 
 ## Configuration
 Store configuration value in envorinment variables.
