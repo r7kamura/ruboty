@@ -46,11 +46,4 @@ describe Ruboty::Adapters::Shell do
       end
     end
   end
-
-  describe "#say" do
-    it "shows given message body on stdout" do
-      Ruboty.logger.should_receive(:info).with("a")
-      adapter.say(body: "a")
-    end
-  end
 end
