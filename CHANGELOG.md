@@ -1,3 +1,6 @@
+## 1.1.9
+- Support slop both version 3 and 4
+
 ## 1.1.8
 - Fix shell adapter
 
