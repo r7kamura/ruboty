@@ -30,7 +30,7 @@ module Ruboty
         options.on("--dotenv", "Load .env before running.")
         options.on("-g", "--generate", "Generate a new chatterbot with ./ruboty/ directory if specified.")
         options.on("-h", "--help", "Display this help message.")
-        options.string("-l", "--load", "Load a ruby file before running.")
+        options.on("-l", "--load=", "Load a ruby file before running.")
       end
     end
     memoize :options
