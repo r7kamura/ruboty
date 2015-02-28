@@ -30,7 +30,11 @@ module Ruboty
         options.on("--dotenv", "Load .env before running.")
         options.on("-g", "--generate", "Generate a new chatterbot with ./ruboty/ directory if specified.")
         options.on("-h", "--help", "Display this help message.")
-        options.on("-l", "--load=", "Load a ruby file before running.")
+        if Slop::VERSION >= "4.0.0"
+          options.string("-l", "--load", "Load a ruby file before running.")
+        else
+          options.on("-l", "--load=", "Load a ruby file before running.")
+        end
       end
     end
     memoize :options
