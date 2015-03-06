@@ -1,3 +1,8 @@
+## 1.2.0
+- Add DISABLE_DEFAULT_HANDLERS env
+- Get away from help message indentation
+- Support filter query on help handler (e.g. `@ruboty help ping`)
+
 ## 1.1.9
 - Support slop both version 3 and 4
 
