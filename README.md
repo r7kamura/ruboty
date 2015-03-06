@@ -51,11 +51,12 @@ gem "ruboty-redis"
 gem "ruboty-slack"
 ```
 
-## Environment
+## ENV
 ```
-LOG_LEVEL   - Log level for debug (default: 3)
-RUBOTY_NAME - Name to respond to mention (default: ruboty)
-RUBOTY_ENV  - Loaded gem group name (default: development)
+DISABLE_DEFAULT_HANDLERS - Pass 1 to disable default handlers (default: nil)
+LOG_LEVEL                - Log level for debug (default: 3)
+RUBOTY_ENV               - Loaded gem group name (default: development)
+RUBOTY_NAME              - Name to respond to mention (default: ruboty)
 ```
 
 ## Deploy
