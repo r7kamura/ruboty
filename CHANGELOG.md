@@ -1,3 +1,6 @@
+## 1.2.1
+- Refer Bundler from top-level
+
 ## 1.2.0
 - Add DISABLE_DEFAULT_HANDLERS env
 - Get away from help message indentation
