@@ -60,8 +60,8 @@ module Ruboty
     memoize :adapter
 
     def bundle
-      Bundler.require(:default, env)
-    rescue Bundler::GemfileNotFound
+      ::Bundler.require(:default, env)
+    rescue ::Bundler::GemfileNotFound
     end
 
     def env
