@@ -3,7 +3,7 @@
 Ruby + Bot = Ruboty.
 
 ## Dependencies
-* Ruby 1.9.3+
+* Ruby 2.0.0
 
 ## Adapter
 Adapter hooks up your robot to chat services.
