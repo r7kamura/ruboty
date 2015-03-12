@@ -1,4 +1,4 @@
-# Ruboty [![Build Status](https://travis-ci.org/r7kamura/ruboty.png)](https://travis-ci.org/r7kamura/ruboty) [![Code Climate](https://codeclimate.com/github/r7kamura/ruboty.png)](https://codeclimate.com/github/r7kamura/ruboty) [![Code Climate](https://codeclimate.com/github/r7kamura/ruboty/coverage.png)](https://codeclimate.com/github/r7kamura/ruboty)
+# Ruboty [![Build Status](https://travis-ci.org/r7kamura/ruboty.png)](https://travis-ci.org/r7kamura/ruboty) [![Code Climate](https://codeclimate.com/github/r7kamura/ruboty.png)](https://codeclimate.com/github/r7kamura/ruboty)
 
 Ruby + Bot = Ruboty.
 
