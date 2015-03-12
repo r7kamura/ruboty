@@ -6,7 +6,7 @@ Ruby + Bot = Ruboty.
 * Ruby 2.0.0
 
 ## Adapter
-Adapter hooks up your robot to chat services.
+Adapter hooks up ruboty to chat services.
 
 * [ruboty-hipchat](https://github.com/r7kamura/ruboty-hipchat)
 * [ruboty-idobata](https://github.com/hanachin/ruboty-idobata)
@@ -14,13 +14,13 @@ Adapter hooks up your robot to chat services.
 * [ruboty-twitter](https://github.com/r7kamura/ruboty-twitter)
 
 ## Brain
-Brain persists your robot's memory.
+Brain persists memories.
 
 * [ruboty-leveldb](https://github.com/nownabe/ruboty-leveldb)
 * [ruboty-redis](https://github.com/r7kamura/ruboty-redis)
 
 ## Handler
-Handler provides various behaviors to your robot.
+Handler provides various behaviors.
 
 * [ruboty-alias](https://github.com/r7kamura/ruboty-alias)
 * [ruboty-cron](https://github.com/r7kamura/ruboty-cron)
@@ -38,7 +38,7 @@ Handler provides various behaviors to your robot.
 ## Configuration
 Store configuration value in envorinment variables.
 They are easy to change between deploys without changing any code.
-We recommend to put `.env` and run with `ruboty --dotenv` option to manage them.
+We recommend to put `.env` and run with `ruboty --dotenv` option to manage them .
 
 All you need to use your favorite plugins is to write their names into Gemfile.
 Ruboty will load them before running.
