@@ -30,6 +30,14 @@ describe Ruboty::Adapters::Shell do
       end
     end
 
+    context "with EOF" do
+      it "stops" do
+        Readline.stub(readline: nil)
+        adapter.should_receive(:stop).and_call_original
+        adapter.run
+      end
+    end
+
     context "with Inturrupt from console" do
       it "stops" do
         Readline.stub(:readline).and_raise(Interrupt)
