@@ -1,3 +1,6 @@
+## 1.2.2
+- Support ^D on shell adapter (thx @suu-g)
+
 ## 1.2.1
 - Refer Bundler from top-level
 
