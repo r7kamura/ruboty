@@ -45,7 +45,7 @@ module Ruboty
 
       def step
         case body = read
-        when "exit", "quit"
+        when "exit", "quit", nil
           stop
         else
           robot.receive(body: body, source: SOURCE)
