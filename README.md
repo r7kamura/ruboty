@@ -28,7 +28,6 @@ Handler provides various behaviors.
 * [ruboty-echo](https://github.com/taiki45/ruboty-echo)
 * [ruboty-github](https://github.com/r7kamura/ruboty-github)
 * [ruboty-google_image](https://github.com/r7kamura/ruboty-google_image)
-* [ruboty-japan_weather](https://github.com/taiki45/ruboty-japan_weather)
 * [ruboty-kokodeikku](https://github.com/r7kamura/ruboty-kokodeikku)
 * [ruboty-lgtm](https://github.com/negipo/ruboty-lgtm)
 * [ruboty-syoboi_calendar](https://github.com/r7kamura/ruboty-syoboi_calendar)
