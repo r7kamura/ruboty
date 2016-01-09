@@ -17,9 +17,9 @@ describe Ruboty::Handlers::Help do
     context "with valid condition" do
       let(:body) do
         <<-EOS.strip_heredoc.strip
-          ruboty /help( me)?(?: (?<filter>.+))?\\z/i - Show this help message
-          ruboty /ping\\z/i - Return PONG to PING
-          ruboty /who am i\\?/i - Answer who you are
+          ruboty help (me) (<filter>) - Show this help message
+          ruboty ping - Return PONG to PING
+          ruboty who am i? - Answer who you are
         EOS
       end
 
@@ -44,7 +44,7 @@ describe Ruboty::Handlers::Help do
       it "filters descriptions by given filter" do
         robot.should_receive(:say).with(
           hash_including(
-            body: "ruboty /ping\\z/i - Return PONG to PING",
+            body: "ruboty ping - Return PONG to PING",
           ),
         )
         robot.receive(body: "@ruboty help ping", from: from, to: to)

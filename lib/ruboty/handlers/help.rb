@@ -5,6 +5,7 @@ module Ruboty
         /help( me)?(?: (?<filter>.+))?\z/i,
         description: "Show this help message",
         name: "help",
+        command: "help (me) (<filter>)",
       )
 
       def help(message)
