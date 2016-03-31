@@ -39,8 +39,8 @@ describe Ruboty::Env::Validatable do
   describe "#validate!" do
     context "without required ENV" do
       it "dies with usage as erorr message" do
-        Ruboty.logger.should_receive(:error).with(/description of A/)
-        Ruboty.should_receive(:exit)
+        expect(Ruboty.logger).to receive(:error).with(/description of A/)
+        expect(Ruboty).to receive(:exit)
         instance.validate!
       end
     end

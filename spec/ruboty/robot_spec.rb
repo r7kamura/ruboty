@@ -12,12 +12,12 @@ describe Ruboty::Robot do
   describe "#brain" do
     context "without any Brain class" do
       it "returns a Ruboty::Brains::Memory" do
-        instance.brain.should be_a Ruboty::Brains::Memory
+        expect(instance.brain).to be_a Ruboty::Brains::Memory
       end
 
       it "can be used as a Hash object" do
         instance.brain.data["a"] = 1
-        instance.brain.data["a"].should == 1
+        expect(instance.brain.data["a"]).to eq 1
       end
     end
 
@@ -31,7 +31,7 @@ describe Ruboty::Robot do
       end
 
       it "returns its instance as a Brain" do
-        instance.brain.should be_a another_brain_class
+        expect(instance.brain).to be_a another_brain_class
       end
     end
   end

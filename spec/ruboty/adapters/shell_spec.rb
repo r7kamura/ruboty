@@ -2,7 +2,7 @@ require "spec_helper"
 
 describe Ruboty::Adapters::Shell do
   before do
-    Ruboty.logger.stub(:info)
+    allow(Ruboty.logger).to receive(:info)
   end
 
   let(:adapter) do
@@ -16,40 +16,40 @@ describe Ruboty::Adapters::Shell do
   describe "#run" do
     context "with `exit`" do
       it "stops" do
-        Readline.stub(readline: "exit")
-        adapter.should_receive(:stop).and_call_original
+        allow(Readline).to receive(:readline).and_return("exit")
+        expect(adapter).to receive(:stop).and_call_original
         adapter.run
       end
     end
 
     context "with `quit`" do
       it "stops" do
-        Readline.stub(readline: "quit")
-        adapter.should_receive(:stop).and_call_original
+        allow(Readline).to receive(:readline).and_return("quit")
+        expect(adapter).to receive(:stop).and_call_original
         adapter.run
       end
     end
 
     context "with EOF" do
       it "stops" do
-        Readline.stub(readline: nil)
-        adapter.should_receive(:stop).and_call_original
+        allow(Readline).to receive(:readline).and_return(nil)
+        expect(adapter).to receive(:stop).and_call_original
         adapter.run
       end
     end
 
     context "with Inturrupt from console" do
       it "stops" do
-        Readline.stub(:readline).and_raise(Interrupt)
-        adapter.should_receive(:stop).and_call_original
+        allow(Readline).to receive(:readline).and_raise(Interrupt)
+        expect(adapter).to receive(:stop).and_call_original
         adapter.run
       end
     end
 
     context "without `exit` nor `quit`" do
       it "passes given message to robot" do
-        Readline.stub(:readline).and_return("a", "exit")
-        robot.should_receive(:receive).with(body: "a", source: described_class::SOURCE)
+        allow(Readline).to receive(:readline).and_return("a", "exit")
+        expect(robot).to receive(:receive).with(body: "a", source: described_class::SOURCE)
         adapter.run
       end
     end

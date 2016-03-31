@@ -12,7 +12,7 @@ describe Ruboty::AdapterBuilder do
   describe "#build" do
     context "with no other adapter class definition" do
       it "returns a Ruboty::Adapters::Shell as a default adapter" do
-        builder.build.should be_a Ruboty::Adapters::Shell
+        expect(builder.build).to be_a Ruboty::Adapters::Shell
       end
     end
 
@@ -29,7 +29,7 @@ describe Ruboty::AdapterBuilder do
       end
 
       it "returns an instance of that adapter class" do
-        builder.build.should be_a another_adapter_class
+        expect(builder.build).to be_a another_adapter_class
       end
     end
   end

@@ -21,7 +21,7 @@ describe Ruboty::Handlers::Base do
 
   describe ".on" do
     it "registers an action to the handler" do
-      robot.should_receive(:say).with(2)
+      expect(robot).to receive(:say).with(2)
       robot.receive(body: "1 + 1")
     end
   end

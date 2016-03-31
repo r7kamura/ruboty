@@ -24,7 +24,7 @@ describe Ruboty::Handlers::Help do
       end
 
       it "responds to `@ruboty help` and says each handler's description" do
-        robot.should_receive(:say).with(
+        expect(robot).to receive(:say).with(
           body: body,
           code: true,
           from: to,
@@ -42,7 +42,7 @@ describe Ruboty::Handlers::Help do
 
     context "with filter" do
       it "filters descriptions by given filter" do
-        robot.should_receive(:say).with(
+        expect(robot).to receive(:say).with(
           hash_including(
             body: "ruboty /ping\\z/i - Return PONG to PING",
           ),
