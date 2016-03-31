@@ -21,7 +21,7 @@ describe Ruboty::Commands::Generate do
     context "with normal condition" do
       it "generates ./ruboty/ directory from our templates" do
         call
-        File.exist?("./ruboty/").should == true
+        expect(File).to be_exist("./ruboty/")
       end
     end
 
@@ -31,7 +31,7 @@ describe Ruboty::Commands::Generate do
       end
 
       it "exits process with dying message" do
-        Ruboty.logger.should_receive(:error).with("Error: ./ruboty/ already exists.")
+        expect(Ruboty.logger).to receive(:error).with("Error: ./ruboty/ already exists.")
         expect { call }.to raise_error(SystemExit)
       end
     end

@@ -15,7 +15,7 @@ describe Ruboty::Commands::Run do
     end
 
     it "creates an adapter and calls .run to it" do
-      Ruboty::Adapters::Shell.any_instance.should_receive(:run)
+      expect_any_instance_of(Ruboty::Adapters::Shell).to receive(:run)
       call
     end
   end

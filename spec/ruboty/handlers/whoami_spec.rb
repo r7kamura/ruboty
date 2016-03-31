@@ -19,7 +19,7 @@ describe Ruboty::Handlers::Whoami do
     end
 
     it "returns PONG to PING" do
-      robot.should_receive(:say).with(
+      expect(robot).to receive(:say).with(
         body: from,
         from: to,
         to: from,
