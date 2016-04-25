@@ -3,6 +3,7 @@ require "active_support/core_ext/module/delegation"
 require "active_support/core_ext/string/inflections"
 require "bundler"
 require "dotenv"
+require "logger"
 require "mem"
 require "slop"
 
@@ -13,7 +14,7 @@ module Ruboty
     def logger
       @logger ||= begin
         $stdout.sync = true
-        logger = Ruboty::Logger.new($stdout)
+        logger = Logger.new($stdout)
         logger.level = ENV["LOG_LEVEL"] ? ENV["LOG_LEVEL"].to_i : Logger::INFO
         logger
       end
@@ -55,7 +56,6 @@ require "ruboty/commands/generate"
 require "ruboty/commands/help"
 require "ruboty/commands/run"
 require "ruboty/handlers/base"
-require "ruboty/logger"
 require "ruboty/message"
 require "ruboty/robot"
 require "ruboty/version"
