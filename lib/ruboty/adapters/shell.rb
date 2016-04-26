@@ -28,7 +28,7 @@ module Ruboty
       private
 
       def explain
-        Ruboty.logger.info(USAGE)
+        puts USAGE
       end
 
       def read
