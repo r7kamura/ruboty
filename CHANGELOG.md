@@ -1,3 +1,6 @@
+## 1.2.3
+- User default Logger class (thx @eagletmt)
+
 ## 1.2.2
 - Support ^D on shell adapter (thx @suu-g)
 
