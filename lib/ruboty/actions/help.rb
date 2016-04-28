@@ -2,19 +2,24 @@ module Ruboty
   module Actions
     class Help < Base
       def call
-        message.reply(body, code: true)
+        descriptions = filtered_descriptions
+        if descriptions.empty?
+          message.reply("No description matched to '#{message[:filter]}'")
+        else
+          message.reply(descriptions.join("\n"), code: true)
+        end
       end
 
       private
 
-      def body
+      def filtered_descriptions
         descriptions = all_descriptions
         if message[:filter]
           descriptions.select! do |description|
             description.include?(message[:filter])
           end
         end
-        descriptions.join("\n")
+        descriptions
       end
 
       def all_descriptions
