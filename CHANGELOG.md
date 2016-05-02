@@ -1,3 +1,6 @@
+## 1.2.4
+- Improve help command output (thx @k0kubun)
+
 ## 1.2.3
 - User default Logger class (thx @eagletmt)
 
