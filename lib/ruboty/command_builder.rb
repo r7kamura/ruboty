@@ -32,8 +32,10 @@ module Ruboty
         options.on("-h", "--help", "Display this help message.")
         if Slop::VERSION >= "4.0.0"
           options.string("-l", "--load", "Load a ruby file before running.")
+          options.string("--pid", "Write the PID to a file.")
         else
           options.on("-l", "--load=", "Load a ruby file before running.")
+          options.on("--pid=", "Write the PID to a file.")
         end
       end
     end

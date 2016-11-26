@@ -17,6 +17,7 @@ module Ruboty
       dotenv
       bundle
       setup
+      pid
       remember
       handle
       adapt
@@ -88,6 +89,14 @@ module Ruboty
 
     def handle
       handlers
+    end
+
+    def pid
+      path = options[:pid]
+      if path
+        File.open(path, "w") { |f| f.write(Process.pid) }
+        at_exit { File.unlink(path) }
+      end
     end
   end
 end
