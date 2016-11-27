@@ -27,6 +27,7 @@ module Ruboty
 
     def options
       Slop.parse(arguments) do |options|
+        options.on("--daemon", "Run as a daemon.")
         options.on("--dotenv", "Load .env before running.")
         options.on("-g", "--generate", "Generate a new chatterbot with ./ruboty/ directory if specified.")
         options.on("-h", "--help", "Display this help message.")

@@ -14,6 +14,7 @@ module Ruboty
     end
 
     def run
+      daemon
       dotenv
       bundle
       setup
@@ -68,6 +69,10 @@ module Ruboty
       ENV["RUBOTY_ENV"] || DEFAULT_ENV
     end
     memoize :env
+
+    def daemon
+      Process.daemon(true, false) if options[:daemon]
+    end
 
     def dotenv
       Dotenv.load if options[:dotenv]
