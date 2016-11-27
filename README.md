@@ -1,5 +1,6 @@
 # Ruboty
 
+[[![Gem](https://img.shields.io/gem/v/formatador.svg)]()](https://rubygems.org/gems/ruboty)
 [![Build Status](https://travis-ci.org/r7kamura/ruboty.png)](https://travis-ci.org/r7kamura/ruboty)
 [![Code Climate](https://codeclimate.com/github/r7kamura/ruboty.png)](https://codeclimate.com/github/r7kamura/ruboty)
 
