@@ -40,6 +40,10 @@ module Ruboty
       options[:name]
     end
 
+    def command
+      options[:command]
+    end
+
     def <=>(action)
       pattern.to_s <=> action.pattern.to_s
     end

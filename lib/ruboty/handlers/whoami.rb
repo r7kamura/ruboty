@@ -5,6 +5,7 @@ module Ruboty
         /who am i\?/i,
         name: "whoami",
         description: "Answer who you are",
+        command: "who am i?",
       )
 
       def whoami(message)
