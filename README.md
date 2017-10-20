@@ -13,7 +13,9 @@ Ruby + Bot = Ruboty.
 
 Adapter hooks up ruboty to chat services.
 
-- [ruboty-slack](https://github.com/r7kamura/ruboty-slack)
+- Slack
+  - [ruboty-slack](https://github.com/r7kamura/ruboty-slack) (XMPP gateway)
+  - [ruboty-slack_rtm](https://github.com/rosylilly/ruboty-slack_rtm) (Bot RTM API)
 - [ruboty-twitter](https://github.com/r7kamura/ruboty-twitter)
 - [ruboty-hipchat](https://github.com/r7kamura/ruboty-hipchat)
 - [ruboty-idobata](https://github.com/hanachin/ruboty-idobata)
