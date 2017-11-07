@@ -20,6 +20,7 @@ Adapter hooks up ruboty to chat services.
 - [ruboty-hipchat](https://github.com/r7kamura/ruboty-hipchat)
 - [ruboty-idobata](https://github.com/hanachin/ruboty-idobata)
 - [ruboty-chatwork](https://github.com/mhag/ruboty-chatwork)
+- [ruboty-discord](https://github.com/ykzts/ruboty-discord)
 
 ## Brain
 
