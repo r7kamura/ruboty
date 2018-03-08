@@ -1,6 +1,7 @@
 module Ruboty
   class Robot
     DEFAULT_ENV = "development"
+    DEFAULT_PORT = "8080"
     DEFAULT_ROBOT_NAME = "ruboty"
 
     include Mem
@@ -21,6 +22,7 @@ module Ruboty
       pid
       remember
       handle
+      route
       adapt
     end
 
@@ -50,6 +52,11 @@ module Ruboty
     end
     memoize :brain
 
+    def server
+      WEBrick::HTTPServer.new({ Port: port, ServerType: Thread, Logger: Ruboty.logger })
+    end
+    memoize :server
+
     private
 
     def adapt
@@ -71,6 +78,11 @@ module Ruboty
     end
     memoize :env
 
+    def port
+      ENV["PORT"] || ENV["RUBOTY_PORT"] || DEFAULT_PORT
+    end
+    memoize :port
+
     def daemon
       Process.daemon(true, false) if options[:daemon]
     end
@@ -88,12 +100,22 @@ module Ruboty
     end
     memoize :handlers
 
+    def routers
+      Ruboty.routers.map { |router_class| router_class.new(self) }
+    end
+    memoize :routers
+
     def remember
       brain
     end
 
     def handle
       handlers
+    end
+
+    def route
+      routers
+      server.start
     end
 
     def pid

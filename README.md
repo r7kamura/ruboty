@@ -66,9 +66,11 @@ gem "ruboty-slack"
 
 ```
 DISABLE_DEFAULT_HANDLERS - Pass 1 to disable default handlers (default: nil)
+DISABLE_DEFAULT_ROUTERS  - Pass 1 to disable default routers (default: nil)
 LOG_LEVEL                - Log level for debug (default: 3)
 RUBOTY_ENV               - Loaded gem group name (default: development)
 RUBOTY_NAME              - Name to respond to mention (default: ruboty)
+RUBOTY_PORT              - Port number to listen http (default: 8080)
 ```
 
 ## Deploy

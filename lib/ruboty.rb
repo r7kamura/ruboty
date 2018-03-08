@@ -6,6 +6,7 @@ require "dotenv"
 require "logger"
 require "mem"
 require "slop"
+require "webrick"
 
 module Ruboty
   class << self
@@ -30,8 +31,17 @@ module Ruboty
     end
     memoize :handlers
 
+    def routers
+      []
+    end
+    memoize :routers
+
     def actions
       handlers.map(&:actions).flatten.sort_by { |action| action.all? ? 1 : 0 }
+    end
+
+    def paths
+      routers.map(&:paths).flatten
     end
   end
 end
@@ -57,11 +67,23 @@ require "ruboty/commands/help"
 require "ruboty/commands/run"
 require "ruboty/handlers/base"
 require "ruboty/message"
+require "ruboty/path"
+require "ruboty/paths/base"
+require "ruboty/paths/help"
+require "ruboty/paths/ping"
+require "ruboty/paths/say"
 require "ruboty/robot"
+require "ruboty/routers/base"
 require "ruboty/version"
 
 if ENV["DISABLE_DEFAULT_HANDLERS"] != "1"
   require "ruboty/handlers/help"
   require "ruboty/handlers/ping"
   require "ruboty/handlers/whoami"
+end
+
+if ENV["DISABLE_DEFAULT_ROUTERS"] != "1"
+  require "ruboty/routers/help"
+  require "ruboty/routers/ping"
+  require "ruboty/routers/say"
 end
