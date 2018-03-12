@@ -3,8 +3,9 @@ module Ruboty
     class Help < Base
       on(
         /help( me)?(?: (?<filter>.+))?\z/i,
-        description: "Show this help message",
         name: "help",
+        command: "help [me] [<filter>]",
+        description: "Show this help message",
       )
 
       def help(message)

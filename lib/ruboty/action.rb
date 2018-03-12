@@ -23,6 +23,10 @@ module Ruboty
       !!options[:all]
     end
 
+    def command
+      options[:command] || pattern.inspect
+    end
+
     def description
       options[:description] || "(no description)"
     end

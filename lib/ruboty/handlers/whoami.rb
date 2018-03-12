@@ -3,6 +3,7 @@ module Ruboty
     class Whoami < Base
       on(
         /who am i\?/i,
+        command: "who am i",
         name: "whoami",
         description: "Answer who you are",
       )
