@@ -1,3 +1,7 @@
+## 1.3.1
+
+- Support unicode spaces like U+00a0 (thx @sugi)
+
 ## 1.3.0
 
 - Add --daemonize option
