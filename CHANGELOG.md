@@ -1,3 +1,8 @@
+## Unreleased
+
+- Use reline gem instead of readline (thx @unasuke)
+- Change required Ruby version from 2.2 to 2.6
+
 ## 1.3.1
 
 - Support unicode spaces like U+00a0 (thx @sugi)
