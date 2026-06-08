@@ -1,4 +1,4 @@
-## Unreleased
+## 1.4.0
 
 - Use reline gem instead of readline (thx @unasuke)
 - Change required Ruby version from 2.2 to 2.6
