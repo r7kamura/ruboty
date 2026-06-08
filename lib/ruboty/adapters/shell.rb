@@ -1,4 +1,4 @@
-require "readline"
+require "reline"
 
 module Ruboty
   module Adapters
@@ -32,7 +32,7 @@ module Ruboty
       end
 
       def read
-        Readline.readline(PROMPT, true).tap do |line|
+        Reline.readline(PROMPT, true).tap do |line|
           history_file.puts(line)
         end
       end
@@ -63,7 +63,7 @@ module Ruboty
       def remember
         if history_pathname.exist?
           history_pathname.each_line do |line|
-            Readline::HISTORY << line.rstrip
+            Reline::HISTORY << line.rstrip
           end
         end
       end

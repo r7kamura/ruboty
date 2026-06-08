@@ -16,7 +16,7 @@ describe Ruboty::Adapters::Shell do
   describe "#run" do
     context "with `exit`" do
       it "stops" do
-        allow(Readline).to receive(:readline).and_return("exit")
+        allow(Reline).to receive(:readline).and_return("exit")
         expect(adapter).to receive(:stop).and_call_original
         adapter.run
       end
@@ -24,7 +24,7 @@ describe Ruboty::Adapters::Shell do
 
     context "with `quit`" do
       it "stops" do
-        allow(Readline).to receive(:readline).and_return("quit")
+        allow(Reline).to receive(:readline).and_return("quit")
         expect(adapter).to receive(:stop).and_call_original
         adapter.run
       end
@@ -32,7 +32,7 @@ describe Ruboty::Adapters::Shell do
 
     context "with EOF" do
       it "stops" do
-        allow(Readline).to receive(:readline).and_return(nil)
+        allow(Reline).to receive(:readline).and_return(nil)
         expect(adapter).to receive(:stop).and_call_original
         adapter.run
       end
@@ -40,7 +40,7 @@ describe Ruboty::Adapters::Shell do
 
     context "with Inturrupt from console" do
       it "stops" do
-        allow(Readline).to receive(:readline).and_raise(Interrupt)
+        allow(Reline).to receive(:readline).and_raise(Interrupt)
         expect(adapter).to receive(:stop).and_call_original
         adapter.run
       end
@@ -48,7 +48,7 @@ describe Ruboty::Adapters::Shell do
 
     context "without `exit` nor `quit`" do
       it "passes given message to robot" do
-        allow(Readline).to receive(:readline).and_return("a", "exit")
+        allow(Reline).to receive(:readline).and_return("a", "exit")
         expect(robot).to receive(:receive).with(body: "a", source: described_class::SOURCE)
         adapter.run
       end
