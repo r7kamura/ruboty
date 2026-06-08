@@ -16,12 +16,13 @@ Gem::Specification.new do |spec|
   spec.test_files    = spec.files.grep(%r{^(test|spec|features)/})
   spec.require_paths = ["lib"]
 
-  spec.required_ruby_version = ">= 2.2.2"
+  spec.required_ruby_version = ">= 2.6"
 
   spec.add_dependency "activesupport"
   spec.add_dependency "bundler"
   spec.add_dependency "dotenv"
   spec.add_dependency "mem"
+  spec.add_dependency "reline"
   spec.add_dependency "slop"
   spec.add_development_dependency "rake"
   spec.add_development_dependency "rspec", "3.4.0"
