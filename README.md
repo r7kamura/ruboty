@@ -1,12 +1,10 @@
 # Ruboty
 
-[![Build Status](https://travis-ci.org/r7kamura/ruboty.svg)](https://travis-ci.org/r7kamura/ruboty)
-
 Ruby + Bot = Ruboty.
 
 ## Dependencies
 
-- Ruby 2.2.2
+- Ruby 3.3 or later
 
 ## Adapter
 
@@ -75,3 +73,5 @@ RUBOTY_NAME              - Name to respond to mention (default: ruboty)
 See [r7kamura/ruboty-template](https://github.com/r7kamura/ruboty-template) for example.
 
 [![Deploy](https://www.herokucdn.com/deploy/button.png)](https://heroku.com/deploy?template=https://github.com/r7kamura/ruboty-template)
+
+ruboty was originally designed to be deployed on Heroku. Heroku no longer offers free plans, so this may no longer work there.
