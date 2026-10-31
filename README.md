@@ -1,7 +1,5 @@
 # Ruboty
 
-[![Gem](https://img.shields.io/gem/v/ruboty.svg)](https://rubygems.org/gems/ruboty)
-
 Ruby + Bot = Ruboty.
 
 ## Dependencies
