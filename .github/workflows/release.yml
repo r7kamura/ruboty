@@ -1,0 +1,11 @@
+name: release
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  release:
+    uses: r7kamura/workflows/.github/workflows/gem-release.yml@main
+    if: github.repository_owner == 'r7kamura'
