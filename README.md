@@ -74,4 +74,6 @@ See [r7kamura/ruboty-template](https://github.com/r7kamura/ruboty-template) for 
 
 [![Deploy](https://www.herokucdn.com/deploy/button.png)](https://heroku.com/deploy?template=https://github.com/r7kamura/ruboty-template)
 
-ruboty was originally designed to be deployed on Heroku. Heroku no longer offers free plans, so this may no longer work there.
+> [!NOTE]
+> ruboty was originally designed to be deployed on Heroku.
+> Heroku no longer offers free plans, so this deployment may no longer work there.
