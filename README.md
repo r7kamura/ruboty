@@ -1,13 +1,12 @@
 # Ruboty
 
 [![Gem](https://img.shields.io/gem/v/ruboty.svg)](https://rubygems.org/gems/ruboty)
-[![Build Status](https://travis-ci.org/r7kamura/ruboty.svg)](https://travis-ci.org/r7kamura/ruboty)
 
 Ruby + Bot = Ruboty.
 
 ## Dependencies
 
-- Ruby 2.2.2
+- Ruby 3.3 or later
 
 ## Adapter
 
