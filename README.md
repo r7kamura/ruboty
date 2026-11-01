@@ -10,14 +10,11 @@ Ruby + Bot = Ruboty.
 
 Adapter hooks up ruboty to chat services.
 
-- Slack
-  - [ruboty-slack](https://github.com/r7kamura/ruboty-slack) (XMPP gateway)
-  - [ruboty-slack_rtm](https://github.com/rosylilly/ruboty-slack_rtm) (Bot RTM API)
-- [ruboty-twitter](https://github.com/r7kamura/ruboty-twitter)
-- [ruboty-hipchat](https://github.com/r7kamura/ruboty-hipchat)
-- [ruboty-idobata](https://github.com/hanachin/ruboty-idobata)
+- [ruboty-slack_events](https://github.com/tomoasleep/ruboty-slack_events) (Slack Events API over Socket Mode)
 - [ruboty-chatwork](https://github.com/mhag/ruboty-chatwork)
 - [ruboty-discord](https://github.com/ykzts/ruboty-discord)
+
+Adapters for services that have shut down or for APIs that are no longer available (Slack XMPP gateway, Slack RTM API, HipChat, Idobata and the Twitter streaming API) were removed from this list.
 
 ## Brain
 
@@ -56,7 +53,7 @@ Ruboty will load them before running.
 gem "ruboty-cron"
 gem "ruboty-google_image"
 gem "ruboty-redis"
-gem "ruboty-slack"
+gem "ruboty-slack_events"
 ```
 
 ## ENV
@@ -70,10 +67,13 @@ RUBOTY_NAME              - Name to respond to mention (default: ruboty)
 
 ## Deploy
 
-See [r7kamura/ruboty-template](https://github.com/r7kamura/ruboty-template) for example.
+ruboty is a single long-running process and needs no inbound port, so any host that keeps a process or container running will do.
+See [r7kamura/ruboty-template](https://github.com/r7kamura/ruboty-template) for a ready-to-use setup with a Dockerfile.
 
-[![Deploy](https://www.herokucdn.com/deploy/button.png)](https://heroku.com/deploy?template=https://github.com/r7kamura/ruboty-template)
+```bash
+docker build -t ruboty .
+docker run --env-file .env ruboty
+```
 
-> [!NOTE]
-> ruboty was originally designed to be deployed on Heroku.
-> Heroku no longer offers free plans, so this deployment may no longer work there.
+Without Docker, run `bundle exec ruboty --dotenv` under a process manager such as systemd, and have it restart on failure.
+Put settings such as `RUBOTY_ENV`, `RUBOTY_NAME` and adapter tokens (for example `SLACK_TOKEN` and `SLACK_APP_TOKEN`) in `.env`.
