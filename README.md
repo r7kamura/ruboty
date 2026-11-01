@@ -31,11 +31,9 @@ Handler provides various behaviors.
 - [ruboty-cron](https://github.com/r7kamura/ruboty-cron)
 - [ruboty-echo](https://github.com/taiki45/ruboty-echo)
 - [ruboty-github](https://github.com/r7kamura/ruboty-github)
-- [ruboty-google_image](https://github.com/r7kamura/ruboty-google_image)
 - [ruboty-kokodeikku](https://github.com/r7kamura/ruboty-kokodeikku)
 - [ruboty-lgtm](https://github.com/negipo/ruboty-lgtm)
 - [ruboty-syoboi_calendar](https://github.com/r7kamura/ruboty-syoboi_calendar)
-- [ruboty-talk](https://github.com/r7kamura/ruboty-talk)
 
 [Other plugins are hosted on Rubygems.](https://rubygems.org/search?utf8=%E2%9C%93&query=ruboty-)
 
@@ -51,7 +49,6 @@ Ruboty will load them before running.
 ```ruby
 # Gemfile
 gem "ruboty-cron"
-gem "ruboty-google_image"
 gem "ruboty-redis"
 gem "ruboty-slack_events"
 ```
